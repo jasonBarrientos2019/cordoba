@@ -1,1 +1,2 @@
-# cordoba
+## Instalacion
+ node i
