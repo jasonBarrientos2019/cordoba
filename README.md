@@ -1,2 +1,9 @@
 ## Instalacion
- node i
+```
+node i
+```
+## Modo dev
+
+```
+npm run dev
+```
