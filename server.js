@@ -10,7 +10,6 @@ const PagePool = require("./pagePool");
 const DigitalSign = require("./digitalSign");
 const TemplateProcessor = require("./templateProcessor");
 const port = 3000;
-const workbook = require("./converToExcel");
 
 var pagePool;
 var digitalSign;
@@ -47,20 +46,13 @@ async function print(page, body) {
 
 startService().then((app) => {
   app.post("/print", async (req, res, next) => {
+          
+  // if (  req.body.document.format=="excel") {
+  //   res.setHeader('Content-disposition', 'attachment; filename=file.xlsx');
+  //   res.setHeader('Content-type', 'application/vnd.ms-excel');
+  // }
 
-
-    
-      
-  if (  req.body.document.format=="excel") {
-    res.setHeader('Content-disposition', 'attachment; filename=file.xlsx');
-    res.setHeader('Content-type', 'application/vnd.ms-excel');
-  
-    data=workbook(req.body.content);
-   
-     data.write('Response.xlsx', res);
-
-  }
-  else if (req.body.document.format=="pdf"){
+   if (req.body.document.format=="pdf"){
   pagePool.acquire().then((page) => {
         print(page, req.body).then((file) => {
           pagePool.release(page);
