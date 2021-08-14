@@ -11,7 +11,7 @@ class TemplatesCache {
 
   loadTemplates(search) {
     //var EXTENSION = ".html";
-    var targetFiles = fs.readdirSync("./templates/").filter(function(file) {
+    var targetFiles = fs.readdirSync("./src/templates/").filter(function(file) {
       return path
         .basename(file)
         .toLowerCase()

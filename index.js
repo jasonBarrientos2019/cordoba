@@ -2,14 +2,19 @@ const os = require("os");
 var express = require("express");
 var path = require("path");
 
+//Configuracion
+require('dotenv').config()
+
 var fs = require("fs");
 
 var bodyParser = require("body-parser");
 var compression = require("compression");
-const PagePool = require("./pagePool");
-const DigitalSign = require("./digitalSign");
-const TemplateProcessor = require("./templateProcessor");
-const port = 3000;
+
+const PagePool = require("./src/pagePool");
+const DigitalSign = require("./src/digitalSign");
+const TemplateProcessor = require("./src/templateProcessor");
+
+const port =  process.env.PORT;
 
 var pagePool;
 var digitalSign;
