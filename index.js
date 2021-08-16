@@ -1,11 +1,8 @@
 const os = require("os");
 var express = require("express");
-var path = require("path");
 
 //Configuracion
 require('dotenv').config()
-
-var fs = require("fs");
 
 var bodyParser = require("body-parser");
 var compression = require("compression");
@@ -82,6 +79,7 @@ startService().then((app) => {
   app.listen(port, () => {
     console.log("Server running on " + `http://localhost:${port}`);
   });
+  
 });
 
 setup();
