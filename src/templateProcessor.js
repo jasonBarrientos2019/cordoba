@@ -18,6 +18,8 @@ class TemplateProcessor {
 
     return hb(context);
   }
+  
+  // ############################ Partials ############################ 
 
   async registerPartials(template) {
     template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
@@ -28,6 +30,7 @@ class TemplateProcessor {
       );
     });
   }
+  // ############################ Helpers ############################ 
 
   async registerHelpers() {
     handlebars.registerHelper("if_eq", (a, b, opts) => {
