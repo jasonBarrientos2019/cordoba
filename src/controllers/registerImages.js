@@ -11,9 +11,14 @@ async function registerImages(template) {
       if (m) {
         var url = m[1];
 
-        var b64Template = await imageToBase64(__dirname+'/../templates/'+url);
+        try {
+          var b64Template=await imageToBase64(__dirname+'/../templates/'+url);
 
-        console.log(__dirname);
+        } catch (error) {
+          console.log(`\n\n Error en la carga de la imagen ${url} \n`); 
+
+        }
+
         template = template.replace(
           url,
           `data:image/png;base64,${b64Template}`
