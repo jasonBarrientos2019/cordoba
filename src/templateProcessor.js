@@ -1,5 +1,6 @@
 const handlebars = require("handlebars");
 const TemplatesCache = require("./templatesCache");
+const { DateTime } = require("luxon");
 
 class TemplateProcessor {
   constructor() {
@@ -59,7 +60,34 @@ class TemplateProcessor {
           }
         }
       );
-      
+
+      handlebars.registerHelper("date", (date, format, options) => {
+
+        function capitalizeFirstLetter(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        let initialDate = '';
+          if (date == "now") {
+            initialDate = DateTime.fromJSDate(new Date()).setLocale('es');
+            initialDate = initialDate.toFormat(format);
+            if (format == 'MMMM') 
+            {
+              initialDate = capitalizeFirstLetter(initialDate)
+            }
+
+            return initialDate;
+          } else {
+            initialDate = DateTime.fromISO(date).setLocale('es');
+            initialDate = initialDate.toFormat(format);
+            if (format == 'MMMM') 
+            {
+              initialDate = capitalizeFirstLetter(initialDate)
+            }
+
+            return initialDate;
+          }
+        }
+      );
     }
     
 }
