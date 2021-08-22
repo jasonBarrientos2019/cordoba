@@ -23,18 +23,13 @@ class Server{
         this.app.use(express.json());
         this.app.use(compression());
 
-        //Directorio publico
-        // this.app.use(express.static('public'));
-
     }
     listen(){
         this.app.listen(this.port,()=> {
         console.log(`Servidor corriendo en el puerto ${this.port}`);
     })}
     routes(){
-        
-      // this.app.use(this.usersPath,require('../routes/user.route'));
-        
+                
       this.app.post(this.appPath,postPrint);
 
     }
