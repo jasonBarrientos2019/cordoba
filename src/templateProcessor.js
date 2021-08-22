@@ -1,94 +1,57 @@
 const handlebars = require("handlebars");
-const TemplatesCache = require("./templatesCache");
-const { DateTime } = require("luxon");
+const colors=require('colors')
+const fs=require('fs')
+const path=require('path')
+
+//registers
+const registerImages=require("./controllers/registers/registerImages");
+const registerHelpers=require("./controllers/registers/registerHelpers")
 
 class TemplateProcessor {
   constructor() {
-    this.templatesCache = new TemplatesCache();
-    this.registerHelpers();
+    registerHelpers();
   }
 
-  async build(template, context) {
-    var t = this.templatesCache.get(template);
+  async build(nameTemplate, dataTemplate) {
 
-    if (!t) {
-      await this.registerPartials(t);
-    }
+    const templateContent =this.getTemplateContent(nameTemplate);
+
+     await this.registerPartials(templateContent);
+
+
+    var t=await registerImages(templateContent);
 
     var hb = handlebars.compile(t);
 
-    return hb(context);
+    return hb(dataTemplate);
   }
   
   // ############################ Partials ############################ 
 
   async registerPartials(template) {
-    template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
-      var partialName = x.match(/[\w\.]+/)[0];
-      handlebars.registerPartial(
-        partialName,
-        this.templatesCache.get(partialName)
-      );
+    var matches = template.match(/{{>\s*[\w\.]+\s*}}/g);
+
+    // console.log(matches)
+    if (matches !== null) {
+      template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
+        var partialName = x.match(/[\w\.]+/)[0];
+        handlebars.registerPartial(
+          partialName,
+          this.getTemplateContent(partialName)
+        );
     });
   }
+  }
   // ############################ Helpers ############################ 
+  
+  getTemplateContent(nameTemplate){
 
-  async registerHelpers() {
-    handlebars.registerHelper("if_eq", (a, b, opts) => {
-        if (a == b) {
-          return opts.fn(this);
-        } else {
-          return opts.inverse(this);
-        }
-      });
-      handlebars.registerHelper("eval", (expr, options) => {
-        var reg = new RegExp("\\${(\\S+)}", "g");
-        var compiled = expr.replace(reg, function (match, pull) {
-          return '"' + options.hash[pull] + '"';
-        });
-        console.log(compiled);
-        var evaluated = eval(compiled);
-        return evaluated;
-      });
-      handlebars.registerHelper(
-        "date",
-        (date, format, options) => {
-          if (date == "now") {
-            return DateTime.fromJSDate(new Date()).toFormat(format);
-          } else {
-            return DateTime.fromISO(date).toFormat(format);
-          }
-        }
-      );
+    return fs.readFileSync(
+      path.resolve(__dirname, "./templates/" + nameTemplate),
+      "utf-8"
+    );
+  }
 
-      handlebars.registerHelper("date", (date, format, options) => {
-
-        function capitalizeFirstLetter(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-        let initialDate = '';
-          if (date == "now") {
-            initialDate = DateTime.fromJSDate(new Date()).setLocale('es');
-            initialDate = initialDate.toFormat(format);
-            if (format == 'MMMM') 
-            {
-              initialDate = capitalizeFirstLetter(initialDate)
-            }
-
-            return initialDate;
-          } else {
-            initialDate = DateTime.fromISO(date).setLocale('es');
-            initialDate = initialDate.toFormat(format);
-            if (format == 'MMMM') 
-            {
-              initialDate = capitalizeFirstLetter(initialDate)
-            }
-
-            return initialDate;
-          }
-        }
-      );
-    }
     
 }
 

@@ -2,7 +2,6 @@
 const {response,request}=require('express');
 const Setup=require('./setup');
 const setup=new Setup();
-const registerImages=require("./registerImages");
 
 const postPrint = (req=request, res=response, next) => {
 
@@ -29,14 +28,15 @@ const postPrint = (req=request, res=response, next) => {
     }
 
     async function print(page, body) {
-      var build = await setup.templateProcessor.build(
-        body.document.template,
-        body.content
-      );
 
-      html=await registerImages(build);
+      //Se obtiene del request el nombre y variables a usar
+      let templateName=body.document.template
+      let templaetData=body.content
 
-      await page.setContent(html);
+      
+      var build = await setup.templateProcessor.build(templateName,templaetData);
+      
+      await page.setContent(build);
     
       return page.pdf({
         printBackground: true,

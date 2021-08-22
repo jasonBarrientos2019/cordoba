@@ -12,7 +12,7 @@ async function registerImages(template) {
         var url = m[1];
 
         try {
-          var b64Template=await imageToBase64(__dirname+'/../templates/'+url);
+          var b64Template=await imageToBase64(__dirname+'/../../templates/'+url);
 
         } catch (error) {
           console.log(`\n\n Error en la carga de la imagen ${url} \n`); 

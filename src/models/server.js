@@ -10,7 +10,7 @@ class Server{
     constructor(){
         this.app= express();
         this.port= process.env.PORT;
-        // this.usersPath='/api/user';
+        this.appPath='/print';
 
         //middlerware
         this.middlewares();
@@ -35,7 +35,7 @@ class Server{
         
       // this.app.use(this.usersPath,require('../routes/user.route'));
         
-      this.app.post("/print",postPrint);
+      this.app.post(this.appPath,postPrint);
 
     }
  

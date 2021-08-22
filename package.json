@@ -25,6 +25,7 @@
     "puppeteer": "^5.5.0"
   },
   "devDependencies": {
+    "colors": "^1.4.0",
     "nodemon": "^2.0.12"
   }
 }
