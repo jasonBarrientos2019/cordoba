@@ -7,6 +7,8 @@ const path=require('path')
 const registerImages=require("./controllers/registers/registerImages");
 const registerHelpers=require("./controllers/registers/registerHelpers")
 
+let partials=[];
+
 class TemplateProcessor {
   constructor() {
     registerHelpers();
@@ -32,12 +34,21 @@ class TemplateProcessor {
     var matches = template.match(/{{>\s*[\w\.]+\s*}}/g);
 
     if (matches !== null) {
+
       template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
         var partialName = x.match(/[\w\.]+/)[0];
-        handlebars.registerPartial(
-          partialName,
-          this.getTemplateContent(partialName)
-        );
+
+        let partialCheck=partials.includes(partialName);
+
+        if(!partialCheck){
+          console.log("registerPartials partialName".red+partialName);
+          handlebars.registerPartial(
+                  partialName,
+                  this.getTemplateContent(partialName)
+                );
+                partials.push(partialName)
+        }
+             
         this.registerPartials(this.getTemplateContent(partialName))
         });
     }
