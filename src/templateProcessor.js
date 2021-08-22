@@ -25,13 +25,16 @@ class TemplateProcessor {
 
     var hb = handlebars.compile(t);
 
+  
     return hb(dataTemplate);
+
   }
   
   // ############################ Partials ############################ 
 
   async registerPartials(template) {
     var matches = template.match(/{{>\s*[\w\.]+\s*}}/g);
+    var matchesScope = template.match(/{{\s*[\w\.]+\s*}}/g);
 
     if (matches !== null) {
 
@@ -42,11 +45,17 @@ class TemplateProcessor {
 
         if(!partialCheck){
           console.log("registerPartials partialName".red+partialName);
-          handlebars.registerPartial(
+
+          try {
+             handlebars.registerPartial(
                   partialName,
                   this.getTemplateContent(partialName)
                 );
                 partials.push(partialName)
+          } catch (error) {
+              console.log(`No se encontro el partial ${partialName}`.red); 
+          }
+         
         }
              
         this.registerPartials(this.getTemplateContent(partialName))
