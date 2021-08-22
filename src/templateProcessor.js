@@ -31,7 +31,6 @@ class TemplateProcessor {
   async registerPartials(template) {
     var matches = template.match(/{{>\s*[\w\.]+\s*}}/g);
 
-    // console.log(matches)
     if (matches !== null) {
       template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
         var partialName = x.match(/[\w\.]+/)[0];
@@ -39,10 +38,12 @@ class TemplateProcessor {
           partialName,
           this.getTemplateContent(partialName)
         );
-    });
+        this.registerPartials(this.getTemplateContent(partialName))
+        });
+    }
+
   }
-  }
-  // ############################ Helpers ############################ 
+  // ############################ getTemplateContent ############################ 
   
   getTemplateContent(nameTemplate){
 
