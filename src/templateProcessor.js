@@ -70,7 +70,13 @@ class TemplateProcessor {
 
     return fileContent;
   }
-
+  getContentXLSX(nameTemplate){
+    
+    let pathFile=path.resolve(__dirname, "./templates_xlsx/" + nameTemplate) 
+    let fileContent=fs.readFileSync(pathFile,"utf-8");
+    
+    return fileContent;
+  }
     
 }
 
