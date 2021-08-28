@@ -4,7 +4,7 @@ const fs=require('fs')
 const path=require('path')
 const XlsxTemplate =require("xlsx-template");
 //registers
-const registerImages=require("./controllers/registers/registerImages");
+const {registerImagesPDF,registerImagesXLSX}=require("./controllers/registers/registerImages");
 const registerHelpers=require("./controllers/registers/registerHelpers")
 
 let partials=[];
@@ -22,7 +22,7 @@ class TemplateProcessor {
      await this.registerPartials(templateContent);
 
 
-    var t=await registerImages(templateContent);
+    var t=await registerImagesPDF(templateContent);
 
     var hb = handlebars.compile(t);
 
@@ -41,28 +41,32 @@ class TemplateProcessor {
 
   // ############################ XLSX ############################ 
 
-  async buildXLSX(nameTemplate, dataTemplate) {
+  async buildXLSX(xlsxName, xlsxData) {
 
-    
-    const templateData =this.getContentXLSX(nameTemplate);
-    let work = new XlsxTemplate(templateData);
+
+    const xlsxContent =this.getContentXLSX(xlsxName);
+    //registre imagenes
+
+    let work = new XlsxTemplate(xlsxContent);
 
     let sheetNumber = 1;
 
-    work.substitute(sheetNumber, dataTemplate);
+    work.substitute(sheetNumber, xlsxData);
+
 
     let workBuild=work.generate();
         
-    let file=Buffer.from(workBuild,'binary');
-    
+      let file=Buffer.from(workBuild,'binary');
+
+
     return file;
     
 
   }
 
 
-  getContentXLSX(nameTemplate){
-    let pathFile=path.resolve(`${__dirname}\\templates_xlsx\\${nameTemplate}.xlsx`) 
+  getContentXLSX(xlsxName){
+    let pathFile=path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.xlsx`) 
     let fileContent=fs.readFileSync(pathFile);
     
     return fileContent;

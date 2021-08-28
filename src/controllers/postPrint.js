@@ -27,8 +27,9 @@ const postPrint = (req=request, res=response, next) => {
 
         printXLSX(page, req.body).then((file) => {
           setup.pagePool.release(page);
-        res.setHeader("Content-Disposition","attachment; filename=report.xlsx");          
-          
+          res.setHeader("Content-Disposition",`attachment; filename=${req.body.document.template}.xlsx`);     
+     
+        
             res.send(file);
        
         });
@@ -46,7 +47,6 @@ const postPrint = (req=request, res=response, next) => {
       
       var build = await setup.templateProcessor.buildPDF(templateName,templaetData);
       
-      //TODO:hacer
       await page.setContent(build);
     
       return page.pdf({
