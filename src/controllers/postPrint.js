@@ -5,14 +5,12 @@ const setup=new Setup();
 
 const postPrint = (req=request, res=response, next) => {
 
-  
-    //  if (  req.body.document.format=="excel") {
-    //    res.setHeader('Content-disposition', 'attachment; filename=file.xlsx');
-    //    res.setHeader('Content-type', 'application/vnd.ms-excel');
-    //  }
+ let format= req.body.document.format
+
     
 
     setup.pagePool.acquire().then((page) => {
+      if (format=="pdf") {
       printPDF(page, req.body).then((file) => {
               setup.pagePool.release(page);
               res.setHeader("Content-Type", "application/pdf");
@@ -24,7 +22,19 @@ const postPrint = (req=request, res=response, next) => {
                 res.send(file);
               }
             });
-            
+          }
+      else if (format=="xlsx"){
+
+        printXLSX(page, req.body).then((file) => {
+          setup.pagePool.release(page);
+        res.setHeader("Content-Disposition","attachment; filename=report.xlsx");          
+          
+            res.send(file);
+       
+        });
+
+      }
+
           });
     }
 
@@ -36,13 +46,29 @@ const postPrint = (req=request, res=response, next) => {
       
       var build = await setup.templateProcessor.buildPDF(templateName,templaetData);
       
+      //TODO:hacer
       await page.setContent(build);
     
       return page.pdf({
         PDFBackground: true,
       });
-      
+
     }
+
+    async function printXLSX(page, body) {
+
+      //Se obtiene del request el nombre y variables a usar
+      let templateName=body.document.template
+      let templaetData=body.content
+
+      
+      var build = await setup.templateProcessor.buildXLSX(templateName,templaetData);
+      
+      await page.setContent(build);
+    
+      return build;
+    }
+
 
 
 module.exports=postPrint;

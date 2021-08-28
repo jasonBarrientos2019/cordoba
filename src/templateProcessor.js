@@ -2,7 +2,7 @@ const handlebars = require("handlebars");
 const colors=require('colors')
 const fs=require('fs')
 const path=require('path')
-
+const XlsxTemplate =require("xlsx-template");
 //registers
 const registerImages=require("./controllers/registers/registerImages");
 const registerHelpers=require("./controllers/registers/registerHelpers")
@@ -13,6 +13,7 @@ class TemplateProcessor {
   constructor() {
     registerHelpers();
   }
+  // ############################ PDF ############################ 
 
   async buildPDF(nameTemplate, dataTemplate) {
 
@@ -28,8 +29,46 @@ class TemplateProcessor {
   
     return hb(dataTemplate);
 
+  }  
+
+   getContentPDF(nameTemplate){
+    
+    let pathFile=path.resolve(__dirname, "./templates_pdf/" + nameTemplate) 
+    let fileContent=fs.readFileSync(pathFile,"utf-8");
+
+    return fileContent;
   }
-  
+
+  // ############################ XLSX ############################ 
+
+  async buildXLSX(nameTemplate, dataTemplate) {
+
+    
+    const templateData =this.getContentXLSX(nameTemplate);
+    var work = new XlsxTemplate(templateData);
+
+    var sheetNumber = 1;
+
+    work.substitute(sheetNumber, dataTemplate);
+
+    let workBuild=work.generate();
+        
+    let file=Buffer.from(workBuild,'binary');
+    
+    return file;
+    
+
+  }
+
+
+  getContentXLSX(nameTemplate){
+    
+    let pathFile=path.resolve(__dirname, "./templates_xlsx/" + nameTemplate) 
+    let fileContent=fs.readFileSync(pathFile);
+    
+    return fileContent;
+  }
+
   // ############################ Partials ############################ 
 
   async registerPartials(template) {
@@ -61,23 +100,8 @@ class TemplateProcessor {
     }
 
   }
-  // ############################ getContentPDF ############################ 
-  
-   getContentPDF(nameTemplate){
-    
-    let pathFile=path.resolve(__dirname, "./templates_pdf/" + nameTemplate) 
-    let fileContent=fs.readFileSync(pathFile,"utf-8");
 
-    return fileContent;
-  }
-  getContentXLSX(nameTemplate){
-    
-    let pathFile=path.resolve(__dirname, "./templates_xlsx/" + nameTemplate) 
-    let fileContent=fs.readFileSync(pathFile,"utf-8");
-    
-    return fileContent;
-  }
-    
 }
+
 
 module.exports = TemplateProcessor;
