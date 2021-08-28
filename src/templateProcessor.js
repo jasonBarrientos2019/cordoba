@@ -33,7 +33,7 @@ class TemplateProcessor {
 
    getContentPDF(nameTemplate){
     
-    let pathFile=path.resolve(__dirname, "./templates_pdf/" + nameTemplate) 
+    let pathFile=path.resolve(`${__dirname}\\templates_pdf\\${nameTemplate}.hbs`) 
     let fileContent=fs.readFileSync(pathFile,"utf-8");
 
     return fileContent;
@@ -45,9 +45,9 @@ class TemplateProcessor {
 
     
     const templateData =this.getContentXLSX(nameTemplate);
-    var work = new XlsxTemplate(templateData);
+    let work = new XlsxTemplate(templateData);
 
-    var sheetNumber = 1;
+    let sheetNumber = 1;
 
     work.substitute(sheetNumber, dataTemplate);
 
@@ -62,8 +62,7 @@ class TemplateProcessor {
 
 
   getContentXLSX(nameTemplate){
-    
-    let pathFile=path.resolve(__dirname, "./templates_xlsx/" + nameTemplate) 
+    let pathFile=path.resolve(`${__dirname}\\templates_xlsx\\${nameTemplate}.xlsx`) 
     let fileContent=fs.readFileSync(pathFile);
     
     return fileContent;
