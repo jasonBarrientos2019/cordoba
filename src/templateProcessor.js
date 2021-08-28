@@ -14,7 +14,7 @@ class TemplateProcessor {
     registerHelpers();
   }
 
-  async build(nameTemplate, dataTemplate) {
+  async buildPDF(nameTemplate, dataTemplate) {
 
     const templateContent =this.getContentPDF(nameTemplate);
 
@@ -43,32 +43,31 @@ class TemplateProcessor {
         let partialCheck=partials.includes(partialName);
 
         if(!partialCheck){
-          console.log("registerPartials partialName".red+partialName);
+          let contentFile;
 
           try {
-             handlebars.registerPartial(
-                  partialName,
-                  this.getContentPDF(partialName)
-                );
+             contentFile= this.getContentPDF(partialName)
+
+             handlebars.registerPartial(partialName,contentFile );
                 partials.push(partialName)
           } catch (error) {
-              console.log(`No se encontro el partial ${partialName}`.red); 
+
+              throw new Error(`\n No se encontro el partial ${partialName}\n`.red); 
           }
-         
+          this.registerPartials(contentFile);
+
         }
-             
-        this.registerPartials(this.getContentPDF(partialName))
         });
     }
 
   }
   // ############################ getContentPDF ############################ 
   
-  getContentPDF(nameTemplate){
+   getContentPDF(nameTemplate){
     
     let pathFile=path.resolve(__dirname, "./templates_pdf/" + nameTemplate) 
     let fileContent=fs.readFileSync(pathFile,"utf-8");
-    
+
     return fileContent;
   }
 

@@ -3,7 +3,7 @@ const compression = require("compression");
 //Configuracio de variables de entorno
 require('dotenv').config()
 
-const postPrint=require('../controllers/print');
+const postPrint=require('../controllers/postPrint');
 
 class Server{
 
