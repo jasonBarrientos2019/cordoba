@@ -16,7 +16,7 @@ class TemplateProcessor {
 
   async build(nameTemplate, dataTemplate) {
 
-    const templateContent =this.getTemplateContent(nameTemplate);
+    const templateContent =this.getContentPDF(nameTemplate);
 
      await this.registerPartials(templateContent);
 
@@ -34,7 +34,6 @@ class TemplateProcessor {
 
   async registerPartials(template) {
     var matches = template.match(/{{>\s*[\w\.]+\s*}}/g);
-    var matchesScope = template.match(/{{\s*[\w\.]+\s*}}/g);
 
     if (matches !== null) {
 
@@ -49,7 +48,7 @@ class TemplateProcessor {
           try {
              handlebars.registerPartial(
                   partialName,
-                  this.getTemplateContent(partialName)
+                  this.getContentPDF(partialName)
                 );
                 partials.push(partialName)
           } catch (error) {
@@ -58,19 +57,19 @@ class TemplateProcessor {
          
         }
              
-        this.registerPartials(this.getTemplateContent(partialName))
+        this.registerPartials(this.getContentPDF(partialName))
         });
     }
 
   }
-  // ############################ getTemplateContent ############################ 
+  // ############################ getContentPDF ############################ 
   
-  getTemplateContent(nameTemplate){
-
-    return fs.readFileSync(
-      path.resolve(__dirname, "./templates/" + nameTemplate),
-      "utf-8"
-    );
+  getContentPDF(nameTemplate){
+    
+    let pathFile=path.resolve(__dirname, "./templates_pdf/" + nameTemplate) 
+    let fileContent=fs.readFileSync(pathFile,"utf-8");
+    
+    return fileContent;
   }
 
     
