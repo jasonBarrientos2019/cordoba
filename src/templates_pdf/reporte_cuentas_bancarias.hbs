@@ -141,7 +141,6 @@
 
 					<img id="imgLogo" src="../assets/images/gobierno.png" alt="" >
 
-					{{date "now" "dd/MMMM/yyyy"}}
 
 					<div class="head-title">
 						<p>{{poc}}</p>
@@ -152,11 +151,7 @@
 				<div class="head-r">
 					<p>Página 1 de 1</p>
 					<p>Ejercicio: {{ejercicio}}</p>
-					<p></p>
-					<script type="text/javascript">
-					var d = new Date();
-					document.write(d.getDate()+'/'+d.getDate()+'/'+d.getFullYear()+' '+d.getHours()+':'+d.getMinutes());
-					</script></p>
+					<p>{{date "now" "dd/MMMM/yyyy"}}</p>
 				</div>
 
 				<div class="head-l ">
@@ -216,8 +211,6 @@
 			</div>
 			{{/each }}
 		</div>
-
-	{{> prueba1}}
 
 	</div>
 </body>
