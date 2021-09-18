@@ -1,13 +1,15 @@
 const handlebars = require("handlebars");
-const colors=require('colors')
-const fs=require('fs')
-const path=require('path')
-const XlsxTemplate =require("xlsx-template");
-//registers
-const {registerImagesPDF,registerImagesXLSX}=require("./controllers/registers/registerImages");
-const registerHelpers=require("./controllers/registers/registerHelpers")
+const colors = require('colors')
+const fs = require('fs')
+const path = require('path')
+const XlsxTemplate = require("xlsx-template");
+const cheerio = require('cheerio');
 
-let partials=[];
+//registers
+const { registerImagesPDF, registerImagesXLSX } = require("./controllers/registers/registerImages");
+const registerHelpers = require("./controllers/registers/registerHelpers")
+
+let partials = [];
 
 class TemplateProcessor {
   constructor() {
@@ -16,25 +18,59 @@ class TemplateProcessor {
   // ############################ PDF ############################ 
 
   async buildPDF(nameTemplate, dataTemplate) {
+    try {
+      var templateContent = await this.getContentPDF(nameTemplate);
 
-    const templateContent =this.getContentPDF(nameTemplate);
+      //TODO: await this.preLoadUtils();
 
-     await this.registerPartials(templateContent);
+      await this.registerPartials(templateContent);
 
 
-    var t=await registerImagesPDF(templateContent);
+    } catch (error) {
+      return error;
 
-    var hb = handlebars.compile(t);
+    }
 
-  
-    return hb(dataTemplate);
+    let html = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <link rel="stylesheet" href="css/base.css">
 
-  }  
+    </head>
+    <body>
+        ${templateContent}
+    </body>
+    </html>`
 
-   getContentPDF(nameTemplate){
-    
-    let pathFile=path.resolve(`${__dirname}\\templates_pdf\\${nameTemplate}.hbs`) 
-    let fileContent=fs.readFileSync(pathFile,"utf-8");
+    try {
+      var htmlBuild = await registerImagesPDF(html);
+
+      var hb = handlebars.compile(htmlBuild);
+
+      let hbResult = await hb(dataTemplate)
+
+let result=await this.css(hbResult)
+
+      return result;
+    } catch (error) {
+      return error;
+
+    }
+
+  }
+
+  async getContentPDF(nameTemplate) {
+
+    let pathFile = path.resolve(`${__dirname}\\templates_pdf\\${nameTemplate}.hbs`)
+    let fileContent = fs.readFileSync(pathFile, "utf-8");
+
+    return fileContent;
+  }
+
+  async getCss(nameCSSFile) {
+
+    let pathFile = path.resolve(`${__dirname}\\${nameCSSFile}`)
+    let fileContent = fs.readFileSync(pathFile, "utf-8");
 
     return fileContent;
   }
@@ -44,7 +80,7 @@ class TemplateProcessor {
   async buildXLSX(xlsxName, xlsxData) {
 
 
-    const xlsxContent =this.getContentXLSX(xlsxName);
+    const xlsxContent = this.getContentXLSX(xlsxName);
     //registre imagenes
 
     let work = new XlsxTemplate(xlsxContent);
@@ -54,21 +90,21 @@ class TemplateProcessor {
     work.substitute(sheetNumber, xlsxData);
 
 
-    let workBuild=work.generate();
-        
-      let file=Buffer.from(workBuild,'binary');
+    let workBuild = work.generate();
+
+    let file = Buffer.from(workBuild, 'binary');
 
 
     return file;
-    
+
 
   }
 
 
-  getContentXLSX(xlsxName){
-    let pathFile=path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.xlsx`) 
-    let fileContent=fs.readFileSync(pathFile);
-    
+  getContentXLSX(xlsxName) {
+    let pathFile = path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.xlsx`)
+    let fileContent = fs.readFileSync(pathFile);
+
     return fileContent;
   }
 
@@ -82,26 +118,43 @@ class TemplateProcessor {
       template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
         var partialName = x.match(/[\w\.]+/)[0];
 
-        let partialCheck=partials.includes(partialName);
+        let partialCheck = partials.includes(partialName);
 
-        if(!partialCheck){
+        if (!partialCheck) {
           let contentFile;
 
           try {
-             contentFile= this.getContentPDF(partialName)
+            contentFile = this.getContentPDF(partialName)
 
-             handlebars.registerPartial(partialName,contentFile );
-                partials.push(partialName)
+            handlebars.registerPartial(partialName, contentFile);
+            partials.push(partialName)
           } catch (error) {
 
-              throw new Error(`\n No se encontro el partial ${partialName}\n`.red); 
+            throw new Error(`\n No se encontro el partial ${partialName}\n`.red);
           }
           this.registerPartials(contentFile);
 
         }
-        });
+      });
     }
 
+  }
+
+  async css(input){
+    var $ = cheerio.load(input);
+    var links = $("html").find("link[rel=stylesheet]");
+
+    for (let index = 0; index < links.length; index++) {
+        const element = $(links[index]);
+
+        var css = await this.getCss(element.attr("href"));
+        if(css instanceof Error)
+          throw css;
+
+        $('<style type="text/css"/>').text(css).prependTo($("head"));
+        element.remove();
+    }
+   return $.html() 
   }
 
 }
