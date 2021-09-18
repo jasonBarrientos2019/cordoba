@@ -6,7 +6,7 @@ const XlsxTemplate = require("xlsx-template");
 const cheerio = require('cheerio');
 
 //registers
-const { registerImagesPDF, registerImagesXLSX } = require("./controllers/registers/registerImages");
+const { registerImagesPDF } = require("./controllers/registers/registerImages");
 const registerHelpers = require("./controllers/registers/registerHelpers")
 
 let partials = [];
@@ -48,8 +48,13 @@ class TemplateProcessor {
       var hb = handlebars.compile(htmlBuild);
 
       let hbResult = await hb(dataTemplate)
+      console.log(`hbResult:${hbResult}`);
 
 let result=await this.css(hbResult)
+
+console.log(`result:${result}`);
+
+
 
       return result;
     } catch (error) {
