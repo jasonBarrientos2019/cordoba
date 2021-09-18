@@ -1,6 +1,5 @@
 
 /*CSS general */
-
 * {
     margin:0;
     padding:0; 
@@ -8,11 +7,9 @@
 }
 
 .sheet-static{
-  border: 1px solid red;
   width: 730px;
   height: 1060px;
-  margin: 40px;
-
+  margin: 20px;
 }
 
 /* width: 730px;
@@ -21,11 +18,9 @@ height: 970px; */
 
 .sheet-dynamic{
   border: 1px solid rgb(121, 119, 119);
-  margin-left: auto;
-  margin-right:auto;
+  margin: 20px;
   width: 730px;
   min-height: 970px;
-  margin: 40px;
 }
   /*
   200 mm de width
@@ -33,10 +28,17 @@ height: 970px; */
   */
 
   
-#img-logoSura {
-  width: 160px;
-  height: 60px;
+  .logo-gobierno{
+        width: 250px;
+        height: 80px;
+    }
+
+    /* Evita que un div cone sta clase sea cortado, pro el salto de pagina */
+    
+.npg{
+page-break-inside: avoid;
 }
+
 @page {
   size: A4;
   margin: 40px;
@@ -50,7 +52,7 @@ height: 970px; */
 
     .sheet-static,.sheet-dynamic{
       margin: 0px;
-      border: none;
+      border:none;
     }
   }
 
