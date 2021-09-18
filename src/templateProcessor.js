@@ -48,11 +48,9 @@ class TemplateProcessor {
       var hb = handlebars.compile(htmlBuild);
 
       let hbResult = await hb(dataTemplate)
-      console.log(`hbResult:${hbResult}`);
 
 let result=await this.css(hbResult)
 
-console.log(`result:${result}`);
 
 
 
