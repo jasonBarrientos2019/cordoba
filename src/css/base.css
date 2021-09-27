@@ -1,4 +1,16 @@
 
+/* paleta de colroes */
+
+
+.paleta{
+  color:#002642 ;
+  color:#1C415C ;
+  color:#00538F ;
+  color:#2B658F ;
+  color:#0080DB ;
+}
+
+
 /*CSS general */
 * {
     margin:0;
