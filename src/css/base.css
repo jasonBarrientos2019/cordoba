@@ -7,8 +7,9 @@
 }
 
 .sheet-static{
-  width: 730px;
+  width: 100%;
   height: 1060px;
+  font-size: 10pt;
   margin: 20px;
 }
 
@@ -17,10 +18,10 @@ height: 970px; */
 
 
 .sheet-dynamic{
-  border: 1px solid rgb(121, 119, 119);
+  width: 100%;
+  min-height: 1060px;
+  font-size: 10pt;
   margin: 20px;
-  width: 730px;
-  min-height: 970px;
 }
   /*
   200 mm de width
@@ -29,30 +30,32 @@ height: 970px; */
 
   
   .logo-gobierno{
-        width: 250px;
-        height: 80px;
+        width: 160px;
+        height: 60px;
     }
 
-    /* Evita que un div cone sta clase sea cortado, pro el salto de pagina */
-    
+  /* Evita que un div cone sta clase sea cortado, pro el salto de pagina */
+
 .npg{
-page-break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 @page {
   size: A4;
-  margin: 40px;
+  margin: 20px;
 }
+
 
   @media print {
 
     .end-page{
         page-break-before: always;
     }
-
     .sheet-static,.sheet-dynamic{
       margin: 0px;
-      border:none;
+      border: none;
+      border: 1px solid red;
     }
+    
   }
 
