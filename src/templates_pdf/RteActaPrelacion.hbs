@@ -1,0 +1,49 @@
+<style>
+
+    .w-100{
+        width: 100%;
+    }
+    .w-33{
+        width: 33%;
+    }
+    .RteActaPrelacion-head{
+        width: 100%;
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+    }
+    .RteActaPrelacion-head-table{
+        display: flex;  
+         width: 60%;
+         flex-wrap: wrap;
+    }
+
+</style>
+
+<div class="sheet-dynamic">
+
+
+    <div class="RteActaPrelacion-head">
+        <div class="RteActaPrelacion-head-logo">
+            <img  class="logo-gobierno" src="../assets/images/gobierno.jpg" alt="">
+        </div>
+
+        <div class="RteActaPrelacion-head-table">
+
+                <div class="w-33"><b>Fecha</b></div>
+                <div class="w-33"><b>Ejercicio</b></div>
+                <div class="w-33"><b>Estado</b></div>
+
+                <div class="w-33">{{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
+                <div class="w-33">{{ejercicio}}</div>
+                <div class="w-33">{{estado}}</div>
+
+                <div class="w-100"><b>  Subasta electrónica N°:</b> {{nroSubasta}}</div>
+                <div class="w-100"><b>Expediente N°:</b> {{expediente}}</div>
+                <div class="w-100"><b> Publicado en ComprasPublicas desde: </b> {{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
+
+        </div>
+    </div>
+
+
+</div>

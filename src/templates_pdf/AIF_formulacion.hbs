@@ -1,0 +1,131 @@
+<style type="text/css">
+    /*AIF_F*/
+
+    /*Head*/
+    .AIF_F_head {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .tc {
+        text-align: center;
+    }
+
+    .AIF_F_head_title {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    /*table*/
+    .AIF_F_main {
+        width: 100%;
+    }
+
+    .AIF_F_main_row {
+        display: flex;
+        width: 100%;
+    }
+
+    .AIF_F_main_row div:nth-child(1) {
+
+        width: 55%;
+    }
+
+    .AIF_F_main_row div:nth-child(n+2) {
+        width: 15%;
+    }
+
+    .sub-item{
+        padding-left: 10px;
+    }
+
+
+    .monto{
+        border: 1px solid blue;
+        background: red;
+    }
+    .group{
+        border: 1px solid grey;
+    }
+
+</style>
+
+<div class="sheet-dynamic">
+    <div class="AIF_F_head">
+
+        <div class="AIF_F_head_logo">
+            <img class="logo-gobierno" src="../assets/images/gobierno.jpg" alt="">
+        </div>
+
+        <div class="AIF_F_head_title tc">
+            <p> Cuenta Ahorro - Inversión - Financiamiento</p>
+            <p>Presupuesto 2019</p>
+        </div>
+
+        <div class="AIF_F_head_dateManufacture tc">
+            <p><b>Fecha de Confección:</b></p>
+            <p> {{date "now" "dd/mm/yyyy"}}</p>
+            <p> {{date "now" "hh:mm"}}</p>
+        </div>
+
+    </div>
+
+    <div class="AIF_F_table">
+        <div class="AIF_F_table_title">
+
+
+            <div class="AIF_F_main_row ">
+                <div> </div>
+                <div>Anualizado:</div>
+                <div>Anteproyecto: </div>
+                <div>Proyecto Ley: </div>
+            </div>
+
+        </div>
+
+        <div class="AIF_F_main">
+            <br>
+            <br>
+            {{#each Montos}}
+            {{#each groups}}
+            <div class="AIF_F_main_row group">
+                <div> {{nombreGroup}} </div>
+                <div> {{montoAnualizado}}</div>
+                <div> {{montoAnteproyecto}}</div>
+                <div> {{ProyectoLey}}</div>
+            </div>
+            {{#each elementosGroups}}
+            <div class="AIF_F_main_row ">
+                <div> {{elementosGroup}} </div>
+                <div> {{montoAnualizado}}</div>
+                <div> {{montoAnteproyecto}}</div>
+                <div> {{ProyectoLey}}</div>
+            </div>
+            {{#each elementos}}
+            <div class="AIF_F_main_row">
+                <div> {{nombreElemento}} </div>
+                <div> {{montoAnualizado}}</div>
+                <div> {{montoAnteproyecto}}</div>
+                <div> {{ProyectoLey}}</div>
+            </div>
+
+            {{/each}}
+            {{/each}}
+            {{/each}}
+
+            <div class="AIF_F_main_row monto">
+                <div> {{montoName}} </div>
+                <div> {{montoAnualizado}}</div>
+                <div> {{montoAnteproyecto}}</div>
+                <div> {{ProyectoLey}}</div>
+            </div>
+
+
+
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>
