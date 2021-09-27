@@ -177,7 +177,6 @@ class TemplateProcessor {
       var compiled = expr.replace(reg, function (match, pull) {
         return '"' + options.hash[pull] + '"';
       });
-      console.log(compiled);
       var evaluated = eval(compiled);
       return evaluated;
     });

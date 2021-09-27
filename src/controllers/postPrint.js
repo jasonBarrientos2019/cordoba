@@ -58,7 +58,6 @@ const postPrint = (req=request, res=response, next) => {
       await page.setContent(build);
     
       return page.pdf({
-        PDFBackground: true,
         preferCSSPageSize: true,
         printBackground: true
       });
