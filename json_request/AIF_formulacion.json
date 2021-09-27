@@ -1,0 +1,80 @@
+{
+    "document": {
+        "template": "AIF_formulacion",
+        "sign": true,
+        "format": "pdf"
+    },
+    "content": {
+        "presupuesto": "2019",
+        "jurisdiccion": "115 - Ministerio de Finanzas",
+        "tipoCuenta": "Departamental",
+        "ejercicio": "2021",
+        "unidadAdministrativa": "45 - Ministerio de Finanzas",
+        "sucursal": "925",
+        "nroCuenta": "329107",
+        "Montos": [
+            {
+                "montoName": "AHORRO CORRIENTE ",
+                "montoAnualizado": "-49.188.752.000",
+                "montoAnteproyecto": "31.748.289.000",
+                "ProyectoLey": "31.750.389.000",
+                "groups": [
+                    {
+                        "nombreGroup": "Ingresos Corrientes",
+                        "montoAnualizado": "216.522.227.695",
+                        "montoAnteproyecto": "352.824.420.000",
+                        "ProyectoLey": "31.750.389.000",
+                        "elementosGroups": [
+                            {
+                                "elementosGroup": "Ingresos Impositivos",
+                                "montoAnualizado": " 194.003.414.000",
+                                "montoAnteproyecto": "196.215.547.000",
+                                "ProyectoLey": "196.217.647.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Impuestos Provinciales",
+                                        "montoAnualizado": " 74.284.000.000",
+                                        "montoAnteproyecto": "74.237.000.000",
+                                        "ProyectoLey": " 74.239.100.000"
+                                    },
+                                    {
+                                        "nombreElemento": "Participacion Federal De Impuestos",
+                                        "montoAnualizado": "100.550.000.000",
+                                        "montoAnteproyecto": "101.090.000.000",
+                                        "ProyectoLey": " 101.090.000.0000"
+                                    },
+                                    {
+                                        "nombreElemento": "Impuestos Nacionales",
+                                        "montoAnualizado": "19.169.414.000",
+                                        "montoAnteproyecto": "20.888.547.000",
+                                        "ProyectoLey": " 20.888.547.000"
+                                    }
+                                ]
+                            },
+                            {
+                                "elementosGroup": "Ingresos No Impositivos",
+                                "montoAnualizado": "17.731.559.787",
+                                "montoAnteproyecto": "29.326.633.000",
+                                "ProyectoLey": "29.326.633.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Tasas Retributivas De Servicios",
+                                        "montoAnualizado": "1.818.922.192",
+                                        "montoAnteproyecto": "2.035.304.000",
+                                        "ProyectoLey": " 2.035.304.000"
+                                    },
+                                    {
+                                        "nombreElemento": "Fondos No Tributarios",
+                                        "montoAnualizado": "15.912.637.595",
+                                        "montoAnteproyecto": "27.291.329.000",
+                                        "ProyectoLey": "27.291.329.000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
