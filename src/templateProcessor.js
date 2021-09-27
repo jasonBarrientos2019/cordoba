@@ -42,19 +42,18 @@ class TemplateProcessor {
     </body>
     </html>`
 
-    try {
-      var htmlBuild = await registerImagesPDF(html);
-
-      var hb = handlebars.compile(htmlBuild);
+    try {      
+      
+      var hb = handlebars.compile(html);
 
       let hbResult = await hb(dataTemplate)
 
-let result=await this.css(hbResult)
 
+      let resultCss=await this.css(hbResult)
 
+      var htmlBuild = await registerImagesPDF(resultCss);
 
-
-      return result;
+      return htmlBuild;
     } catch (error) {
       return error;
 
