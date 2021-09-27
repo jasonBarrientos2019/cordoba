@@ -4,16 +4,20 @@ const fs = require('fs')
 const path = require('path')
 const XlsxTemplate = require("xlsx-template");
 const cheerio = require('cheerio');
+const { DateTime } = require("luxon");
+
+var promisedHandlebars = require("promised-handlebars");
+var Q = require("q");
+var Handlebars = promisedHandlebars(handlebars, { Promise: Q.Promise });
 
 //registers
 const { registerImagesPDF } = require("./controllers/registers/registerImages");
-const registerHelpers = require("./controllers/registers/registerHelpers")
 
 let partials = [];
 
 class TemplateProcessor {
   constructor() {
-    registerHelpers();
+    this.registerHelpers();
   }
   // ############################ PDF ############################ 
 
@@ -44,7 +48,7 @@ class TemplateProcessor {
 
     try {      
       
-      var hb = handlebars.compile(html);
+      var hb = Handlebars.compile(html);
 
       let hbResult = await hb(dataTemplate)
 
@@ -128,7 +132,7 @@ class TemplateProcessor {
           try {
             contentFile = this.getContentPDF(partialName)
 
-            handlebars.registerPartial(partialName, contentFile);
+            Handlebars.registerPartial(partialName, contentFile);
             partials.push(partialName)
           } catch (error) {
 
@@ -158,6 +162,55 @@ class TemplateProcessor {
     }
    return $.html() 
   }
+  
+  async registerHelpers(){
+
+    Handlebars.registerHelper("if_eq", (a, b, opts) => {
+      if (a == b) {
+        return opts.fn(this);
+      } else {
+        return opts.inverse(this);
+      }
+    });
+    Handlebars.registerHelper("eval", (expr, options) => {
+      var reg = new RegExp("\\${(\\S+)}", "g");
+      var compiled = expr.replace(reg, function (match, pull) {
+        return '"' + options.hash[pull] + '"';
+      });
+      console.log(compiled);
+      var evaluated = eval(compiled);
+      return evaluated;
+    });
+
+    Handlebars.registerHelper("date", (date, format, options) => {
+
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+      let initialDate = '';
+        if (date == "now") {
+          initialDate = DateTime.fromJSDate(new Date()).setLocale('es');
+          initialDate = initialDate.toFormat(format);
+          if (format == 'MMMM') 
+          {
+            initialDate = capitalizeFirstLetter(initialDate)
+          }
+
+          return initialDate;
+        } else {
+          initialDate = DateTime.fromISO(date).setLocale('es');
+          initialDate = initialDate.toFormat(format);
+          if (format == 'MMMM') 
+          {
+            initialDate = capitalizeFirstLetter(initialDate)
+          }
+
+          return initialDate;
+        }
+      }
+    );
+  }
+
 
 }
 
