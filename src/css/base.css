@@ -8,6 +8,15 @@
   color:#00538F ;
   color:#2B658F ;
   color:#0080DB ;
+
+  /*Gris*/
+  /*claro*/
+  color:#CDCDCD ;
+    /*ocurp*/
+    color:#9B9B9B ;
+
+    color: #44484B;
+
 }
 
 
@@ -42,7 +51,7 @@ height: 970px; */
 
   
   .logo-gobierno{
-        width: 160px;
+        width: 180px;
         height: 60px;
     }
 
