@@ -1,0 +1,641 @@
+{
+    "document":{
+        "template":"reporte_cuentas_bancarias",
+        "sign":true,
+        "format":"pdf"
+    },
+    "content":{
+        "jurisdiccion":"115 - Ministerio de Finanzas",
+        "tipoCuenta":"Departamental",
+        "ejercicio":"2021",
+        "unidadAdministrativa":"45 - Ministerio de Finanzas",
+        "sucursal":"925",
+        "nroCuenta":"329107",
+        "resumenCuentaCollection":[
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+                {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+                {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+           {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            },
+            {
+                "unidadAdministrativaResumen":"45 - Ministerio de Finanzas",
+                "sucursalResumen":"925",
+                "nroCuentaResumen":"329107",
+                "estadoResumen":"ACTIVA",
+                "adminCentralResumen":"SI",
+                "nroAperturaResumen":"60380" 
+            }
+        ]
+    }
+}
