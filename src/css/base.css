@@ -26,6 +26,9 @@
     padding:0; 
     box-sizing: border-box;
 }
+body{
+  font-family: Helvetica;
+}
 
 .sheet-static{
   width: 100%;
