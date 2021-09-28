@@ -48,7 +48,7 @@ height: 970px; */
 
   /* Evita que un div cone sta clase sea cortado, pro el salto de pagina */
 
-.npg{
+.npb{
   page-break-inside: avoid;
 }
 
