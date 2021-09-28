@@ -103,11 +103,11 @@ border: 1px solid #002642;
 
         <div class="AIF_F_head_title tc">
             <p> Cuenta Ahorro - Inversión - Financiamiento</p>
-            <p>Presupuesto 2019</p>
+            <p>Presupuesto {{presupuesto}}</p>
         </div>
 
         <div class="AIF_F_head_dateManufacture tc">
-            <div class="AIF_F_head_dateManufacture_title">Fecha de Confección: </div>
+            <div class="AIF_F_head_dateManufacture_title">Fecha de Confección</div>
             <p> {{date "now" "dd/mm/yyyy"}} {{date "now" "hh:mm"}}</p>
         </div>
 
@@ -127,21 +127,21 @@ border: 1px solid #002642;
         <div class="AIF_F_main">
             {{#each Montos}}
             {{#each groups}}
-            <div class="AIF_F_main_row">
+            <div class="AIF_F_main_row npb">
                 <div class="AIF_F_main_group"> {{nombreGroup}} </div>
                 <div class="AIF_F_main_group amount"> {{montoAnualizado}}</div>
                 <div class="AIF_F_main_group amount"> {{montoAnteproyecto}}</div>
                 <div class="AIF_F_main_group amount"> {{ProyectoLey}}</div>
             </div>
             {{#each elementosGroups}}
-            <div class="AIF_F_main_row">
+            <div class="AIF_F_main_row npb">
                 <div class="elementosGroups"> {{elementosGroup}} </div>
                 <div class="elementosGroups amount"> {{montoAnualizado}}</div>
                 <div class="elementosGroups amount"> {{montoAnteproyecto}}</div>
                 <div class="elementosGroups amount"> {{ProyectoLey}}</div>
             </div>
             {{#each elementos}}
-            <div class="AIF_F_main_row">
+            <div class="AIF_F_main_row npb">
                 <div class="elementos"> {{nombreElemento}} </div>
                 <div class="elementos amount"> {{montoAnualizado}}</div>
                 <div class="elementos amount"> {{montoAnteproyecto}}</div>
@@ -152,7 +152,7 @@ border: 1px solid #002642;
             {{/each}}
             {{/each}}
 
-            <div class="AIF_F_main_row monto">
+            <div class="AIF_F_main_row monto npb">
                 <div > {{montoName}} </div>
                 <div class="amount"> {{montoAnualizado}}</div>
                 <div class="amount"> {{montoAnteproyecto}}</div>
