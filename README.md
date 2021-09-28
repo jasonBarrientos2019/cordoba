@@ -7,3 +7,8 @@ node i
 ```
 npm run dev
 ```
+## Modo prod
+
+```
+npm run start
+```
