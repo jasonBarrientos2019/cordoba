@@ -6,15 +6,9 @@
     },
     "content": {
         "presupuesto": "2019",
-        "jurisdiccion": "115 - Ministerio de Finanzas",
-        "tipoCuenta": "Departamental",
-        "ejercicio": "2021",
-        "unidadAdministrativa": "45 - Ministerio de Finanzas",
-        "sucursal": "925",
-        "nroCuenta": "329107",
         "Montos": [
             {
-                "montoName": "AHORRO CORRIENTE ",
+                "montoName": "Ahorro Corriente",
                 "montoAnualizado": "-49.188.752.000",
                 "montoAnteproyecto": "31.748.289.000",
                 "ProyectoLey": "31.750.389.000",
@@ -70,6 +64,144 @@
                                         "ProyectoLey": "27.291.329.000"
                                     }
                                 ]
+                            },
+                            {
+                                "elementosGroup": "Contribuciones De La Seguridad Social",
+                                "montoAnualizado": "0",
+                                "montoAnteproyecto": "55.807.710.000",
+                                "ProyectoLey": "55.807.710.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Obra Social",
+                                        "montoAnualizado": "0",
+                                        "montoAnteproyecto": "14.762.000.000",
+                                        "ProyectoLey": "14.762.000.000"
+                                    },
+                                    {
+                                        "nombreElemento": "Prevision Social",
+                                        "montoAnualizado": "0",
+                                        "montoAnteproyecto": "41.045.710.000",
+                                        "ProyectoLey": " 41.045.710.000"
+                                    }
+                                ]
+                            },{
+                                "elementosGroup": "Venta De Bienes Y Servicios",
+                                "montoAnualizado": "374.250.001",
+                                "montoAnteproyecto": "44.460.806.000",
+                                "ProyectoLey": "44.460.806.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Venta De Servicios",
+                                        "montoAnualizado": " 363.725.001",
+                                        "montoAnteproyecto": "44.445.461.000",
+                                        "ProyectoLey": "44.445.461.000"
+                                    },
+                                    {
+                                        "nombreElemento": "Venta De Bienes",
+                                        "montoAnualizado": " 10.525.000",
+                                        "montoAnteproyecto": "15.345.0000",
+                                        "ProyectoLey": "15.345.000"
+                                    }
+                                ]
+                            },{
+                                "elementosGroup": "Rentas De La Propiedad",
+                                "montoAnualizado": " 651.013.836",
+                                "montoAnteproyecto": "3.179.651.000",
+                                "ProyectoLey": " 3.179.651.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Intereses",
+                                        "montoAnualizado": "0",
+                                        "montoAnteproyecto": "1.677.531.000",
+                                        "ProyectoLey": "1.677.531.000"
+                                    },{
+                                        "nombreElemento": "Rentas Por Inversiones Financieras",
+                                        "montoAnualizado": "651.013.836",
+                                        "montoAnteproyecto": "1.401.014.000",
+                                        "ProyectoLey": "1.401.014.000"
+                                    },{
+                                        "nombreElemento": "Alquileres",
+                                        "montoAnualizado": "0",
+                                        "montoAnteproyecto": "81.361.000",
+                                        "ProyectoLey": " 81.361.000"
+                                    },{
+                                        "nombreElemento": "Otros",
+                                        "montoAnualizado": "0",
+                                        "montoAnteproyecto": " 19.745.000",
+                                        "ProyectoLey": "19.745.000"
+                                    }
+                                ]
+                            },{
+                                "elementosGroup": "Transferencias Corrientes",
+                                "montoAnualizado": " 3.761.990.071",
+                                "montoAnteproyecto": "23.834.073.000",
+                                "ProyectoLey": "23.834.073.000",
+                                "elementos": [
+                                    {
+                                        "nombreElemento": "Transferencias Corrientes De Origen Provincial",
+                                        "montoAnualizado": "775.382.975",
+                                        "montoAnteproyecto": "10.919.588.000",
+                                        "ProyectoLey": " 10.919.588.000"
+                                    }, {
+                                        "nombreElemento": "Transferencias Corrientes De Origen Nacional",
+                                        "montoAnualizado": " 2.984.259.895",
+                                        "montoAnteproyecto": "12.483.542.000",
+                                        "ProyectoLey": "12.483.542.000"
+                                    }, {
+                                        "nombreElemento": "Otras Transferencias Corrientes",
+                                        "montoAnualizado": " 2.347.201",
+                                        "montoAnteproyecto": "430.943.000",
+                                        "ProyectoLey": "430.943.000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        "nombreGroup": "Erogaciones Corrientes",
+                        "montoAnualizado": " 265.710.979.695",
+                        "montoAnteproyecto": "321.076.131.000",
+                        "ProyectoLey": " 321.076.131.000",
+                        "elementosGroups": [
+                            {
+                                "elementosGroup": "Personal",
+                                "montoAnualizado": " 107.346.402.750",
+                                "montoAnteproyecto": "108.134.073.000",
+                                "ProyectoLey": "108.149.073.000"
+                            }, {
+                                "elementosGroup": "Bienes De Consumo",
+                                "montoAnualizado": " 5.073.429.526",
+                                "montoAnteproyecto": " 6.420.627.500",
+                                "ProyectoLey": "6.412.227.500"
+                            }, {
+                                "elementosGroup": "Servicios No Personales",
+                                "montoAnualizado": " 34.462.446.891",
+                                "montoAnteproyecto": "50.703.910.500",
+                                "ProyectoLey": " 50.697.310.500"
+                            }, {
+                                "elementosGroup": "Previsión Presupuestaria Corriente",
+                                "montoAnualizado": "0",
+                                "montoAnteproyecto": "3.173.258.000",
+                                "ProyectoLey": " 3.173.258.000"
+                            }, {
+                                "elementosGroup": "Intereses Y Gastos Financieros",
+                                "montoAnualizado": " 6.107.615.000",
+                                "montoAnteproyecto": "10.845.874.000",
+                                "ProyectoLey": "10.845.874.000"
+                            }, {
+                                "elementosGroup": "Transferencias Para Erogaciones Corrientes",
+                                "montoAnualizado": " 63.795.048.528",
+                                "montoAnteproyecto": " 70.232.031.000",
+                                "ProyectoLey": " 70.232.031.000"
+                            }, {
+                                "elementosGroup": "Economías De Gestión",
+                                "montoAnualizado": "0",
+                                "montoAnteproyecto": "-427.029.000",
+                                "ProyectoLey": "-427.029.000"
+                            }, {
+                                "elementosGroup": "Prestaciones De La Seguridad Social",
+                                "montoAnualizado": "48.926.037.000",
+                                "montoAnteproyecto": " 71.993.386.000",
+                                "ProyectoLey": "71.993.386.000"
                             }
                         ]
                     }
