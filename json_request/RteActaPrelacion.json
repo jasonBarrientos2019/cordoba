@@ -5,76 +5,350 @@
         "format": "pdf"
     },
     "content": {
-        "ejercicio":"2019",
-        "estado":"Cerrada",
-        "nroSubasta":" 2019/000007",
-        "expediente":": 0680-072217/2019",
+        "ejercicio": "2019",
+        "estado": "Cerrada",
+        "nroSubasta": "2019/000007",
+        "expediente": "0680-072217/2019",
         "presupuesto": "2019",
         "jurisdiccion": "115 - Ministerio de Finanzas",
         "tipoCuenta": "Departamental",
         "unidadAdministrativa": "45 - Ministerio de Finanzas",
         "sucursal": "925",
         "nroCuenta": "329107",
-        "Montos": [
+        "subasta": {
+            "fecha": "11/02/2019",
+            "horaInicio": " 8:00",
+            "horaFin": "12:00",
+            "margenMinimo": "1,0000%",
+            "criterioAdjudicacion": "Renglón"
+        },
+        "renglones": [
             {
-                "montoName": "AHORRO CORRIENTE ",
-                "montoAnualizado": "-49.188.752.000",
-                "montoAnteproyecto": "31.748.289.000",
-                "ProyectoLey": "31.750.389.000",
-                "groups": [
+                "nro": "1",
+                "nombre": "ROLLOS DE CERA PARA IMPRESORA TÉRMICA",
+                "participantes": "4",
+                "ofertas": "11",
+                "presupuesto": "713.800,0000",
+                "renglon": [
                     {
-                        "nombreGroup": "Ingresos Corrientes",
-                        "montoAnualizado": "216.522.227.695",
-                        "montoAnteproyecto": "352.824.420.000",
-                        "ProyectoLey": "31.750.389.000",
-                        "elementosGroups": [
-                            {
-                                "elementosGroup": "Ingresos Impositivos",
-                                "montoAnualizado": " 194.003.414.000",
-                                "montoAnteproyecto": "196.215.547.000",
-                                "ProyectoLey": "196.217.647.000",
-                                "elementos": [
-                                    {
-                                        "nombreElemento": "Impuestos Provinciales",
-                                        "montoAnualizado": " 74.284.000.000",
-                                        "montoAnteproyecto": "74.237.000.000",
-                                        "ProyectoLey": " 74.239.100.000"
-                                    },
-                                    {
-                                        "nombreElemento": "Participacion Federal De Impuestos",
-                                        "montoAnualizado": "100.550.000.000",
-                                        "montoAnteproyecto": "101.090.000.000",
-                                        "ProyectoLey": " 101.090.000.0000"
-                                    },
-                                    {
-                                        "nombreElemento": "Impuestos Nacionales",
-                                        "montoAnualizado": "19.169.414.000",
-                                        "montoAnteproyecto": "20.888.547.000",
-                                        "ProyectoLey": " 20.888.547.000"
-                                    }
-                                ]
-                            },
-                            {
-                                "elementosGroup": "Ingresos No Impositivos",
-                                "montoAnualizado": "17.731.559.787",
-                                "montoAnteproyecto": "29.326.633.000",
-                                "ProyectoLey": "29.326.633.000",
-                                "elementos": [
-                                    {
-                                        "nombreElemento": "Tasas Retributivas De Servicios",
-                                        "montoAnualizado": "1.818.922.192",
-                                        "montoAnteproyecto": "2.035.304.000",
-                                        "ProyectoLey": " 2.035.304.000"
-                                    },
-                                    {
-                                        "nombreElemento": "Fondos No Tributarios",
-                                        "montoAnualizado": "15.912.637.595",
-                                        "montoAnteproyecto": "27.291.329.000",
-                                        "ProyectoLey": "27.291.329.000"
-                                    }
-                                ]
-                            }
-                        ]
+                        "orden": "1",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "valorOfrecido": "581.000,0000"
+                    },
+                    {
+                        "orden": "2",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "valorOfrecido": "600.090,0000"
+                    },
+                    {
+                        "orden": "3",
+                        "proveedor": "TANGOID S.R.L",
+                        "cuit": "30-71143198-1",
+                        "valorOfrecido": "614.200,0000 "
+                    },
+                    {
+                        "orden": "4",
+                        "proveedor": "ECHENIQUE TOMAS ",
+                        "cuit": "20-28851561-2",
+                        "valorOfrecido": "674.790,0000"
+                    }
+                ],
+                "detalle": [
+                    {
+                        "oferta": "11",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:59",
+                        "valorOfrecido": "581.000,0000"
+                    },
+                    {
+                        "oferta": "10",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:59",
+                        "valorOfrecido": "600.090,0000"
+                    },
+                    {
+                        "oferta": "9",
+                        "proveedor": "TANGOID S.R.L.",
+                        "cuit": "30-71143198-1",
+                        "fechaHora": "11/02/2019 11:58",
+                        "valorOfrecido": "614.200,0000"
+                    },
+                    {
+                        "oferta": "8",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:56",
+                        "valorOfrecido": "648.894,0000"
+                    },
+                    {
+                        "oferta": "7",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:56",
+                        "valorOfrecido": " 667.984,0000"
+                    },
+                    {
+                        "oferta": "6",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 11:50",
+                        "valorOfrecido": " 674.790,0000"
+                    },
+                    {
+                        "oferta": "5",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:47",
+                        "valorOfrecido": "682.260,0000"
+                    },
+                    {
+                        "oferta": "4",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:42",
+                        "valorOfrecido": "690.062,0000"
+                    },
+                    {
+                        "oferta": "3",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 11:37",
+                        "valorOfrecido": "697.200,0000"
+                    },
+                    {
+                        "oferta": "2",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:28",
+                        "valorOfrecido": " 705.500,0000"
+                    },
+                    {
+                        "oferta": "1",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 8:03",
+                        "valorOfrecido": "713.800,0000"
+                    }
+                ]
+            },
+            {
+                "nro": "2",
+                "nombre": "TARJETA PLÁSTICA PARA IMPRESORA",
+                "participantes": "4",
+                "ofertas": "7",
+                "presupuesto": "230.000,0000",
+                "renglon": [
+                    {
+                        "orden": "1",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "valorOfrecido": "100.000,0000"
+                    },
+                    {
+                        "orden": "2",
+                        "proveedor": "MARTINO SERGIO DANIEL",
+                        "cuit": "30-70973193-5",
+                        "valorOfrecido": "110.000,0000"
+                    },
+                    {
+                        "orden": "3",
+                        "proveedor": "TANGOID S.R.L",
+                        "cuit": "30-71143198-1",
+                        "valorOfrecido": "114.000,0000"
+                    },
+                    {
+                        "orden": "4",
+                        "proveedor": "ECHENIQUE TOMAS ",
+                        "cuit": "20-28851561-2",
+                        "valorOfrecido": "215.900,0000"
+                    }
+                ],
+                "detalle": [
+                    {
+                        "oferta": "7",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0 ",
+                        "fechaHora": "11/02/2019 11:59",
+                        "valorOfrecido": "100.000,0000"
+                    },{
+                        "oferta": "6",
+                        "proveedor": "MARTINO SERGIO DANIEL",
+                        "cuit": "20-12489385-3",
+                        "fechaHora": "11/02/2019 11:58",
+                        "valorOfrecido": "110.000,0000"
+                    },{
+                        "oferta": "5",
+                        "proveedor": "TANGOID S.R.L",
+                        "cuit": "30-71143198-1",
+                        "fechaHora": "11/02/2019 11:57",
+                        "valorOfrecido": "114.000,0000"
+                    },{
+                        "oferta": "4",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0 ",
+                        "fechaHora": "11/02/2019 11:56",
+                        "valorOfrecido": "150.000,0000"
+                    },{
+                        "oferta": "3",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 11:51",
+                        "valorOfrecido": "215.900,0000"
+                    },{
+                        "oferta": "2",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0 ",
+                        "fechaHora": "11/02/2019 11:47",
+                        "valorOfrecido": "218.700,0000"
+                    },{
+                        "oferta": "1",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 8:02",
+                        "valorOfrecido": "230.000,0000"
+                    }
+                ]
+            },
+            {
+                "nro": "3",
+                "nombre": "IMPRESORA TÉRMICA PARA TARJETAS",
+                "participantes": "5",
+                "ofertas": "10",
+                "presupuesto": "392.000,0000",
+                "renglon": [
+                    {
+                        "orden": "1",
+                        "proveedor": "MARTINO SERGIO DANIEL",
+                        "cuit": "20-12489385-3",
+                        "valorOfrecido": "295.000,0000"
+                    },
+                    {
+                        "orden": "2",
+                        "proveedor": "TANGOID S.R.L.",
+                        "cuit": "30-71143198-1",
+                        "valorOfrecido": " 299.995,0000"
+                    },
+                    {
+                        "orden": "3",
+                        "proveedor": "ID GROUP S.A.",
+                        "cuit": "30-70805310-0",
+                        "valorOfrecido": "325.640,0000"
+                    },
+                    {
+                        "orden": "4",
+                        "proveedor": "ECHENIQUE TOMAS ",
+                        "cuit": "20-28851561-2",
+                        "valorOfrecido": "362.500,0000"
+                    },
+                    {
+                        "orden": "5",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "valorOfrecido": "380.000,0000"
+                    }
+                ],
+                "detalle": [
+                    {
+                        "oferta": "10",
+                        "proveedor": "MARTINO SERGIO DANIEL",
+                        "cuit": "20-12489385-3",
+                        "fechaHora": "11/02/2019 11:59",
+                        "valorOfrecido": "295.000,0000"
+                    },{
+                        "oferta": "9",
+                        "proveedor": "TANGOID S.R.L",
+                        "cuit": "30-71143198-1",
+                        "fechaHora": "11/02/2019 11:57",
+                        "valorOfrecido": "299.995,0000"
+                    },{
+                        "oferta": "8",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:57",
+                        "valorOfrecido": "325.640,0000"
+                    },{
+                        "oferta": "7",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:56",
+                        "valorOfrecido": "345.830,0000"
+                    },{
+                        "oferta": "6",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 11:52",
+                        "valorOfrecido": "362.500,0000"
+                    },{
+                        "oferta": "5",
+                        "proveedor": "ID GROUP S.A",
+                        "cuit": "30-70805310-0",
+                        "fechaHora": "11/02/2019 11:46",
+                        "valorOfrecido": "367.270,0000"
+                    },{
+                        "oferta": "4",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:41",
+                        "valorOfrecido": "380.000,0000"
+                    },{
+                        "oferta": "3",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 11:36",
+                        "valorOfrecido": "384.000,0000"
+                    },{
+                        "oferta": "2",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:29",
+                        "valorOfrecido": "388.000,0000"
+                    },{
+                        "oferta": "1",
+                        "proveedor": "ECHENIQUE TOMAS",
+                        "cuit": "20-28851561-2",
+                        "fechaHora": "11/02/2019 8:03",
+                        "valorOfrecido": "392.000,0000"
+                    }
+                ]
+            },
+            {
+                "nro": "4",
+                "nombre": "ESCANERS CON ALIMENTADOR",
+                "participantes": "2",
+                "ofertas": "2",
+                "presupuesto": "125.000,0000",
+                "renglon": [
+                    {
+                        "orden": "1",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "valorOfrecido": " 121.000,0000"
+                    },
+                    {
+                        "orden": "2",
+                        "proveedor": "PENTACOM S A ",
+                        "cuit": "30-67863873-7",
+                        "valorOfrecido": "122.500,0000"
+                    }
+                ],
+                "detalle": [
+                    {
+                        "oferta": "2",
+                        "proveedor": "DIGITAL SOLUCIONES INFORMATICAS S R L",
+                        "cuit": "30-70973193-5",
+                        "fechaHora": "11/02/2019 11:01 ",
+                        "valorOfrecido": "121.000,0000"
+                    },
+                    {
+                        "oferta": "1",
+                        "proveedor": "PENTACOM S A",
+                        "cuit": "30-67863873-7",
+                        "fechaHora": "11/02/2019 10:52",
+                        "valorOfrecido": " 122.500,0000"
                     }
                 ]
             }

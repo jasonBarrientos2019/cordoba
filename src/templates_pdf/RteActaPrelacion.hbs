@@ -1,22 +1,226 @@
 <style>
-
-    .w-100{
-        width: 100%;
-    }
-    .w-33{
-        width: 33%;
-    }
-    .RteActaPrelacion-head{
+    .RteActaPrelacion-head {
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
-    .RteActaPrelacion-head-table{
-        display: flex;  
-         width: 60%;
-         flex-wrap: wrap;
+
+    .RteActaPrelacion-head-table {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #002642;
+        width: 70%;
+
     }
 
+    .RteActaPrelacion-head-table-head,
+    .RteActaPrelacion-head-table-value {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 8pt;
+    }
+
+    .RteActaPrelacion-head-table-head div {
+        color: white;
+        background: #002642;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .RteActaPrelacion-head-table-value div {
+        text-align: center;
+        padding: 3px;
+    }
+
+
+    .RteActaPrelacion-title {
+        width: 100%;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #002642;
+        font-size: 15pt;
+        text-align: center;
+        padding: 5px;
+        border-bottom: 1px solid #002642;
+    }
+
+    .RteActaPrelacion-text {
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+    .RteActaPrelacion-datos-subasta {
+        border: 1px solid #002642;
+        margin-top: 20px;
+    }
+
+    .RteActaPrelacion-datos-subasta-title {
+        text-align: center;
+        background: #002642;
+        color: #fff;
+        padding: 5px;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    .RteActaPrelacion-datos-subasta-head {
+        display: grid;
+        grid-template-columns: 15% 15% 20% 25% 25%;
+        text-align: center;
+        padding: 5px;
+        background: #CDCDCD;
+    }
+
+    .RteActaPrelacion-datos-subasta-value {
+        display: grid;
+        grid-template-columns: 15% 15% 20% 25% 25%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .RteActaPrelacion-subasta-tabla {
+        border: 1px solid #002642;
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .RteActaPrelacion-subasta-tabla-title {
+        background: #002642;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: flex;
+        border-bottom: 1px solid #CDCDCD;
+    }
+
+    .RteActaPrelacion-subasta-tabla-title-nro {
+        width: 20%;
+        text-align: left;
+    }
+
+    .RteActaPrelacion-subasta-tabla-title-nombre {
+        width: 80%;
+        text-align: center;
+
+    }
+
+    .RteActaPrelacion-subasta-tabla-value:nth-child(2n) {
+        background: #CDCDCD;
+    }
+
+    .RteActaPrelacion-subasta-tabla-head {
+        background: #002642;
+        display: grid;
+        color: white;
+        grid-template-columns: 10% 50% 20% 20%;
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+
+    }
+
+    .RteActaPrelacion-subasta-tabla-value {
+        display: grid;
+        grid-template-columns: 10% 50% 20% 20%;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .RteActaPrelacion-detalle-ofertas {
+        width: 90%;
+        margin: auto;
+    }
+
+    .RteActaPrelacion-detalle-ofertas-title {
+        padding: 10px;
+        background: #002642;
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-head-title {
+        background: #002642;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: flex;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-head {
+        border: 1px solid #002642;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-head-title-nro {
+        width: 20%;
+        text-align: left;
+    }
+
+    .RteActaPrelacion-detalle-ofertas-head-title-nombre {
+        width: 80%;
+        text-align: center;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-item {
+        display: grid;
+        background: #CDCDCD;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .RteActaPrelacion-detalle-ofertas-value {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        padding: 5px;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-table {
+        border: 1px solid #002642;
+        margin-bottom: 30px;
+    }
+
+    .RteActaPrelacion-detalle-ofertas-table-head {
+        background: #002642;
+        color: white;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 7% 40% 15% 20% 13%;
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+    .RteActaPrelacion-detalle-ofertas-table-value {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 7% 40% 15% 20% 13%;
+        text-align: center;
+    }
+
+    .RteActaPrelacion-detalle-ofertas-table-value:nth-child(2n) {
+        background: #CDCDCD;
+    }
+
+    .RteActaPrelacion-firma {
+        width: 200px;
+        border-top: 1px solid #002642;
+        padding: 10px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 </style>
 
 <div class="sheet-dynamic">
@@ -24,25 +228,180 @@
 
     <div class="RteActaPrelacion-head">
         <div class="RteActaPrelacion-head-logo">
-            <img  class="logo-gobierno" src="../assets/images/gobierno.jpg" alt="">
+            <img class="logo-gobierno" src="../assets/images/gobierno.jpg" alt="">
         </div>
 
         <div class="RteActaPrelacion-head-table">
 
-                <div class="w-33"><b>Fecha</b></div>
-                <div class="w-33"><b>Ejercicio</b></div>
-                <div class="w-33"><b>Estado</b></div>
+            <div class="RteActaPrelacion-head-table-head">
+                <div>Fecha</div>
+                <div>Ejercicio</div>
+                <div>Estado</div>
+            </div>
 
-                <div class="w-33">{{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
-                <div class="w-33">{{ejercicio}}</div>
-                <div class="w-33">{{estado}}</div>
+            <div class="RteActaPrelacion-head-table-value">
+                <div>{{date "now" "dd/mm/yyyy hhmm:ss"}}</div>
+                <div>{{ejercicio}}</div>
+                <div>{{estado}}</div>
+            </div>
 
-                <div class="w-100"><b>  Subasta electrónica N°:</b> {{nroSubasta}}</div>
-                <div class="w-100"><b>Expediente N°:</b> {{expediente}}</div>
-                <div class="w-100"><b> Publicado en ComprasPublicas desde: </b> {{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
+            <div class="RteActaPrelacion-head-table-head">
+                <div>Subasta electrónica N°</div>
+                <div>Expediente N°</div>
+                <div>Publicado en ComprasPublicas desde</div>
+            </div>
+
+            <div class="RteActaPrelacion-head-table-value">
+                <div>{{nroSubasta}}</div>
+                <div>{{expediente}}</div>
+                <div>{{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
+            </div>
+
 
         </div>
     </div>
 
+    <div class="RteActaPrelacion-title">
+        ACTA DE PRELACIÓN
+    </div>
 
+    <div class="RteActaPrelacion-text">
+        <b>Importante:</b> Notificada la presente acta de prelación, el oferente que presentó la "menor oferta
+        económica", deberá presentar la documentación necesaria en el plazo y lugar previstos en las condiciones de la
+        contratación. En
+        caso de incumplimiento se tendrá por desistida la oferta, momento en el cual se podrá notificar al oferente que
+        le sigue
+        en el orden de prelación.
+
+    </div>
+    <div class="RteActaPrelacion-text">
+        Los lances podrán realizarse hasta la Hora Límite de presentación de ofertas establecida en los pliegos de
+        condiciones generales de la contratación. La hora de las ofertas se exhibe con el formato HH :MM. La fracción
+        "Minutos (MM)"
+        se redondea según el valor de las unidades de medida inferiores a éste
+    </div>
+
+    <div class="RteActaPrelacion-datos-subasta">
+        <div class="RteActaPrelacion-datos-subasta-title">
+            Datos de la subasta
+        </div>
+
+        <div class="RteActaPrelacion-datos-subasta-head">
+            <div>Fecha Subasta</div>
+            <div>Hora de inicio</div>
+            <div>Hora de finalización:</div>
+            <div>Margen mínimo de mejora:</div>
+            <div>Criterio de adjudicación:</div>
+        </div>
+
+        <div class="RteActaPrelacion-datos-subasta-value">
+            <div>{{subasta.fecha}}</div>
+            <div>{{subasta.horaInicio}}</div>
+            <div>{{subasta.horaFin}}</div>
+            <div>{{subasta.margenMinimo}}</div>
+            <div>{{subasta.criterioAdjudicacion}}</div>
+        </div>
+
+
+
+    </div>
+
+    {{#each renglones}}
+
+
+    <div class="RteActaPrelacion-subasta-tabla">
+        <div class="RteActaPrelacion-subasta-tabla-title">
+            <div class="RteActaPrelacion-subasta-tabla-title-nro">
+                RENGLÓN N° {{nro}}
+            </div>
+            <div class="RteActaPrelacion-subasta-tabla-title-nombre">
+                {{nombre}}
+            </div>
+
+        </div>
+
+        <div class="RteActaPrelacion-subasta-tabla-head">
+            <div>Orden</div>
+            <div>Nombre Proveedor</div>
+            <div>CUIT</div>
+            <div>Valor Total Ofrecido</div>
+        </div>
+
+        {{#each renglon}}
+
+        <div class="RteActaPrelacion-subasta-tabla-value">
+            <div>{{orden}}</div>
+            <div>{{proveedor}}</div>
+            <div>{{cuit}}</div>
+            <div>{{valorOfrecido}}</div>
+        </div>
+        {{/each}}
+
+    </div>
+    {{/each}}
+
+    <div class="end-page"></div>
+
+    <div class="RteActaPrelacion-detalle-ofertas-title">
+        DETALLE DE OFERTAS RECIBIDAS
+    </div>
+    {{#each renglones}}
+    <div class="RteActaPrelacion-detalle-ofertas">
+
+        <div class="RteActaPrelacion-detalle-ofertas-head npb">
+            <div class="RteActaPrelacion-detalle-ofertas-head-title">
+                <div class="RteActaPrelacion-detalle-ofertas-head-title-nro">
+                    RENGLÓN N° {{nro}}
+                </div>
+                <div class="RteActaPrelacion-detalle-ofertas-head-title-nombre">
+                    {{nombre}}
+                </div>
+            </div>
+
+            <div class="RteActaPrelacion-detalle-ofertas-item">
+                <div>Cantidad de participantes</div>
+                <div>Cantidad de ofertas recibidas</div>
+                <div>Presupuesto Oficial</div>
+            </div>
+
+            <div class="RteActaPrelacion-detalle-ofertas-value">
+                <div>{{participantes}}</div>
+                <div>{{ofertas}}</div>
+                <div>{{presupuesto}}</div>
+            </div>
+        </div>
+
+        <div class="RteActaPrelacion-detalle-ofertas-table">
+
+            <div class="RteActaPrelacion-detalle-ofertas-table-head">
+                <div>N° Oferta</div>
+                <div>Nombre Proveedor</div>
+                <div>CUIT</div>
+                <div>Fecha y hora de oferta </div>
+                <div>Valor Total Ofrecido</div>
+            </div>
+
+
+            {{#each detalle}}
+            <div class="RteActaPrelacion-detalle-ofertas-table-value">
+                <div>{{oferta}}</div>
+                <div>{{proveedor}}</div>
+                <div>{{cuit}}</div>
+                <div>{{fechaHora}}</div>
+                <div>{{valorOfrecido}}</div>
+            </div>
+            {{/each}}
+
+
+        </div>
+
+
+    </div>
+
+
+    {{/each}}
+
+    <div class="RteActaPrelacion-firma">
+        Firma del Responsable
+    </div>
 </div>
