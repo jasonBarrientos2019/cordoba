@@ -3,14 +3,17 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
     }
 
     .RteActaPrelacion-head-table {
         display: flex;
         flex-wrap: wrap;
         border: 1px solid #002642;
-        width: 70%;
-
+        width: 100%;
+        margin: auto;
     }
 
     .RteActaPrelacion-head-table-head,
@@ -35,14 +38,12 @@
 
 
     .RteActaPrelacion-title {
-        width: 100%;
         margin-top: 20px;
         font-weight: bold;
         color: #002642;
-        font-size: 15pt;
-        text-align: center;
-        padding: 5px;
-        border-bottom: 1px solid #002642;
+        font-size: 20pt;
+        padding-left: 10px;
+        border-left: 5px solid #002642;
     }
 
     .RteActaPrelacion-text {
@@ -131,8 +132,8 @@
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom:30px;
-                border: 1px solid #002642;
+        margin-bottom: 30px;
+        border: 1px solid #002642;
 
 
     }
@@ -224,43 +225,44 @@
 
 
     <div class="RteActaPrelacion-head">
+
+        <div class="RteActaPrelacion-title">
+            ACTA DE PRELACIÓN
+        </div>
         <div class="RteActaPrelacion-head-logo">
             <img class="logo-gobierno" src="../assets/images/gobierno.jpg" alt="">
         </div>
+    </div>
+    
+    <div class="RteActaPrelacion-head-table">
 
-        <div class="RteActaPrelacion-head-table">
-
-            <div class="RteActaPrelacion-head-table-head">
-                <div>Fecha</div>
-                <div>Ejercicio</div>
-                <div>Estado</div>
-            </div>
-
-            <div class="RteActaPrelacion-head-table-value">
-                <div>{{date "now" "dd/mm/yyyy hhmm:ss"}}</div>
-                <div>{{ejercicio}}</div>
-                <div>{{estado}}</div>
-            </div>
-
-            <div class="RteActaPrelacion-head-table-head">
-                <div>Subasta electrónica N°</div>
-                <div>Expediente N°</div>
-                <div>Publicado en ComprasPublicas desde</div>
-            </div>
-
-            <div class="RteActaPrelacion-head-table-value">
-                <div>{{nroSubasta}}</div>
-                <div>{{expediente}}</div>
-                <div>{{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
-            </div>
-
-
+        <div class="RteActaPrelacion-head-table-head">
+            <div>Fecha</div>
+            <div>Ejercicio</div>
+            <div>Estado</div>
         </div>
+
+        <div class="RteActaPrelacion-head-table-value">
+            <div>{{date "now" "dd/mm/yyyy hhmm:ss"}}</div>
+            <div>{{ejercicio}}</div>
+            <div>{{estado}}</div>
+        </div>
+
+        <div class="RteActaPrelacion-head-table-head">
+            <div>Subasta electrónica N°</div>
+            <div>Expediente N°</div>
+            <div>Publicado en ComprasPublicas desde</div>
+        </div>
+
+        <div class="RteActaPrelacion-head-table-value">
+            <div>{{nroSubasta}}</div>
+            <div>{{expediente}}</div>
+            <div>{{date "now" "dd/mm/yyyy hhmm:ss" }}</div>
+        </div>
+
+
     </div>
 
-    <div class="RteActaPrelacion-title">
-        ACTA DE PRELACIÓN
-    </div>
 
     <div class="RteActaPrelacion-text">
         <b>Importante:</b> Notificada la presente acta de prelación, el oferente que presentó la "menor oferta
