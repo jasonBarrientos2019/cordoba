@@ -53,15 +53,16 @@ border: 1px solid #002642;
 
     .AIF_F_main_titles {
         padding: 5px;
-        background: #002642;
-        color: white;
         text-align: center;
         font-weight: bold;
+        background: #002642;
+                color: white;
+
     }
 
     .AIF_F_main_group {
         padding: 5px;
-        background: #00538F;
+        background: #1C415C;
         margin-bottom: 5px;
         color: white;
 
@@ -76,7 +77,7 @@ border: 1px solid #002642;
 
     .elementosGroups {
         padding-left: 5px;
-        color: #002642;
+        color: #2B658F;
         font-weight: bold;
     }
 
@@ -86,12 +87,16 @@ border: 1px solid #002642;
     }
     .monto{
         padding: 5px;
-        background: #1C415C;
+        background: #2B658F;
         color: white;
         margin-bottom: 5px;
     }
 
-
+    .totals{
+        background: #6187A2;
+          padding: 5px;
+        color: white;
+    }
 </style>
 
 <div class="sheet-dynamic">
@@ -108,7 +113,7 @@ border: 1px solid #002642;
 
         <div class="AIF_F_head_dateManufacture tc">
             <div class="AIF_F_head_dateManufacture_title">Fecha de Confección</div>
-            <p> {{date "now" "dd/mm/yyyy"}} {{date "now" "hh:mm"}}</p>
+            <p> {{date "now" "dd/MM/yyyy"}} {{date "now" "hh:mm"}}</p>
         </div>
 
     </div>
@@ -125,38 +130,38 @@ border: 1px solid #002642;
 
 
         <div class="AIF_F_main">
-            {{#each Montos}}
+            {{#each montos}}
             {{#each groups}}
             <div class="AIF_F_main_row npb">
                 <div class="AIF_F_main_group"> {{nombreGroup}} </div>
                 <div class="AIF_F_main_group amount"> {{montoAnualizado}}</div>
                 <div class="AIF_F_main_group amount"> {{montoAnteproyecto}}</div>
-                <div class="AIF_F_main_group amount"> {{ProyectoLey}}</div>
+                <div class="AIF_F_main_group amount"> {{proyectoLey}}</div>
             </div>
             {{#each elementosGroups}}
-            <div class="AIF_F_main_row npb">
+            <div class="AIF_F_main_row npb ">
                 <div class="elementosGroups"> {{elementosGroup}} </div>
                 <div class="elementosGroups amount"> {{montoAnualizado}}</div>
                 <div class="elementosGroups amount"> {{montoAnteproyecto}}</div>
-                <div class="elementosGroups amount"> {{ProyectoLey}}</div>
+                <div class="elementosGroups amount"> {{proyectoLey}}</div>
             </div>
             {{#each elementos}}
             <div class="AIF_F_main_row npb">
                 <div class="elementos"> {{nombreElemento}} </div>
                 <div class="elementos amount"> {{montoAnualizado}}</div>
                 <div class="elementos amount"> {{montoAnteproyecto}}</div>
-                <div class="elementos amount"> {{ProyectoLey}}</div>
+                <div class="elementos amount"> {{proyectoLey}}</div>
             </div>
 
             {{/each}}
             {{/each}}
             {{/each}}
 
-            <div class="AIF_F_main_row monto npb">
-                <div > {{montoName}} </div>
-                <div class="amount"> {{montoAnualizado}}</div>
-                <div class="amount"> {{montoAnteproyecto}}</div>
-                <div class="amount"> {{ProyectoLey}}</div>
+            <div class="AIF_F_main_row  npb">
+                <div class="totals"> {{montoName}} </div>
+                <div class="totals"> {{montoAnualizado}}</div>
+                <div class="totals"> {{montoAnteproyecto}}</div>
+                <div class="totals"> {{proyectoLey}}</div>
             </div>
 
             {{/each}}

@@ -5,9 +5,8 @@
 .paleta{
   color:#002642 ;
   color:#1C415C ;
-  color:#00538F ;
   color:#2B658F ;
-  color:#0080DB ;
+  color:#6187A2 ;
 
   /*Gris*/
   /*claro*/
@@ -25,6 +24,9 @@
     margin:0;
     padding:0; 
     box-sizing: border-box;
+}
+body{
+  font-family: Helvetica;
 }
 
 .sheet-static{
