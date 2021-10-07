@@ -1,0 +1,56 @@
+{
+    "document": {
+        "template": "ComparativaCotizacion",
+        "sign": true,
+        "format": "xlsx"
+    },
+    "content": {
+        "unidadAdministrativa": "45 - Ministerio de Finanzas",
+        "cotizacion": "2019/000007",
+        "tipoContratacion": " Subasta Electrónica Inversa",
+        "fechaImpresion": "19/07/2021",
+        "Criterio": "RENGLÓN - ÍTEM",
+        "proveedores": [
+            {
+                "codigoItem": "4713180002",
+                "bien": "CERAS",
+                "proveedor": "SOLICITADO",
+                "cantidad": "166",
+                "importe": "4300",
+                "total": "713800"
+            },
+            {
+                "codigoItem": "4713180002",
+                "bien": "CERAS",
+                "proveedor": "DIGITAL SOLUCIONES ",
+                "cantidad": "166",
+                "importe": "3615",
+                "total": "600090"
+            },
+            {
+                "codigoItem": "4713180002",
+                "bien": "CERAS",
+                "proveedor": "ECHENIQUE TOMAS",
+                "cantidad": "166",
+                "importe": "4065",
+                "total": "674790"
+            },
+            {
+                "codigoItem": "4713180002",
+                "bien": "CERAS",
+                "proveedor": "ID GROUP S.A.",
+                "cantidad": "166",
+                "importe": "3500",
+                "total": "581000"
+            },
+            {
+                "codigoItem": "4713180002",
+                "bien": "CERAS",
+                "proveedor": "TANGOID S.R.L.",
+                "cantidad": "166",
+                "importe": "3700",
+                "total": "614200"
+            }
+        ]
+    }
+}
