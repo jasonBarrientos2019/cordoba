@@ -9,6 +9,7 @@ const { DateTime } = require("luxon");
 var promisedHandlebars = require("promised-handlebars");
 var Q = require("q");
 var Handlebars = promisedHandlebars(handlebars, { Promise: Q.Promise });
+const convertHtmlToXlsx = require('./convertHtmlToXlsx')
 
 //registers
 const { registerImagesPDF } = require("./controllers/registers/registerImages");
@@ -85,30 +86,66 @@ class TemplateProcessor {
 
   async buildXLSX(xlsxName, xlsxData) {
 
+    try {
 
-    const xlsxContent = this.getContentXLSX(xlsxName);
-    //registre imagenes
+      var templateContent = await this.getContentXLSX(xlsxName);
 
-    let work = new XlsxTemplate(xlsxContent);
+      //TODO: await this.preLoadUtils();
 
-    let sheetNumber = 1;
+    } catch (error) {
+      return error;
 
-    work.substitute(sheetNumber, xlsxData);
+    }
+
+    let html = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <link rel="stylesheet" href="css/base.css">
+
+    </head>
+    <body>
+        ${templateContent}
+    </body>
+    </html>`
+
+    try {      
+      
+      var hb = Handlebars.compile(html);
+
+      let hbResult = await hb(xlsxData)
 
 
-    let workBuild = work.generate();
+      let resultCss=await this.css(hbResult)
 
-    let file = Buffer.from(workBuild, 'binary');
+      var htmlBuild = await registerImagesPDF(resultCss);
+
+    } catch (error) {
+      return error;
+
+    }
 
 
-    return file;
+    const xlsxResult=convertHtmlToXlsx(htmlBuild)
+
+    // let work = new XlsxTemplate(xlsxContent);
+
+    // let sheetNumber = 1;
+
+    // work.substitute(sheetNumber, xlsxData);
+
+
+    // let workBuild = work.generate();
+
+
+
+    return xlsxResult;
 
 
   }
 
 
   getContentXLSX(xlsxName) {
-    let pathFile = path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.xlsx`)
+    let pathFile = path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.hbs`)
     let fileContent = fs.readFileSync(pathFile);
 
     return fileContent;
