@@ -1,0 +1,183 @@
+
+
+<tale>
+
+    <tr>
+        <td >
+            ACTA DE PRELACIÓN
+        </td>
+        <td id="img">
+            <img src="../assets/images/gobierno.jpg" alt="">
+        </td>
+    </tr>
+
+
+
+    <div class="RteActaPrelacion-head-table">
+
+        <div class="RteActaPrelacion-head-table-head">
+            <div>Fecha</div>
+            <div>Ejercicio</div>
+            <div>Estado</div>
+        </div>
+
+        <div class="RteActaPrelacion-head-table-value">
+            <div>{{date "now" "dd/MM/yyyy hh:mm:ss"}}</div>
+            <div>{{ejercicio}}</div>
+            <div>{{estado}}</div>
+        </div>
+
+        <div class="RteActaPrelacion-head-table-head">
+            <div>Subasta electrónica N°</div>
+            <div>Expediente N°</div>
+            <div>Publicado en ComprasPublicas desde</div>
+        </div>
+
+        <div class="RteActaPrelacion-head-table-value">
+            <div>{{nroSubasta}}</div>
+            <div>{{expediente}}</div>
+            <div>{{date "now" "dd/MM/yyyy hh:mm:ss" }}</div>
+        </div>
+    </div>
+
+
+    <div class="RteActaPrelacion-text">
+        <b>Importante:</b> Notificada la presente acta de prelación, el oferente que presentó la "menor oferta
+        económica", deberá presentar la documentación necesaria en el plazo y lugar previstos en las condiciones de la
+        contratación. En
+        caso de incumplimiento se tendrá por desistida la oferta, momento en el cual se podrá notificar al oferente que
+        le sigue
+        en el orden de prelación.
+
+    </div>
+    <div class="RteActaPrelacion-text">
+        Los lances podrán realizarse hasta la Hora Límite de presentación de ofertas establecida en los pliegos de
+        condiciones generales de la contratación. La hora de las ofertas se exhibe con el formato HH :MM. La fracción
+        "Minutos (MM)"
+        se redondea según el valor de las unidades de medida inferiores a éste
+    </div>
+
+    <div class="RteActaPrelacion-datos-subasta">
+        <div class="RteActaPrelacion-datos-subasta-title">
+            Datos de la subasta
+        </div>
+
+        <div class="RteActaPrelacion-datos-subasta-head">
+            <div>Fecha Subasta</div>
+            <div>Hora de inicio</div>
+            <div>Hora de finalización:</div>
+            <div>Margen mínimo de mejora:</div>
+            <div>Criterio de adjudicación:</div>
+        </div>
+
+        <div class="RteActaPrelacion-datos-subasta-value">
+            <div>{{subasta.fecha}}</div>
+            <div>{{subasta.horaInicio}}</div>
+            <div>{{subasta.horaFin}}</div>
+            <div>{{subasta.margenMinimo}}</div>
+            <div>{{subasta.criterioAdjudicacion}}</div>
+        </div>
+
+
+
+    </div>
+
+    {{#each renglones}}
+
+    <div class="RteActaPrelacion-subasta-tabla">
+        <div class="RteActaPrelacion-subasta-tabla-title">
+            <div class="RteActaPrelacion-subasta-tabla-title-nro">
+                RENGLÓN N° {{nro}}
+            </div>
+            <div class="RteActaPrelacion-subasta-tabla-title-nombre">
+                {{nombre}}
+            </div>
+
+        </div>
+
+        <div class="RteActaPrelacion-subasta-tabla-head">
+            <div>Orden</div>
+            <div>Nombre Proveedor</div>
+            <div>CUIT</div>
+            <div>Valor Total Ofrecido</div>
+        </div>
+
+        {{#each renglon}}
+
+        <div class="RteActaPrelacion-subasta-tabla-value">
+            <div>{{orden}}</div>
+            <div>{{proveedor}}</div>
+            <div>{{cuit}}</div>
+            <div>{{valorOfrecido}}</div>
+        </div>
+        {{/each}}
+
+    </div>
+    
+    {{/each}}
+
+    <div class="end-page"></div>
+
+    <div class="RteActaPrelacion-detalle-ofertas-title">
+        DETALLE DE OFERTAS RECIBIDAS
+    </div>
+    {{#each renglones}}
+    <div class="RteActaPrelacion-detalle-ofertas">
+
+        <div class="RteActaPrelacion-detalle-ofertas-head npb">
+            <div class="RteActaPrelacion-detalle-ofertas-head-title">
+                <div class="RteActaPrelacion-detalle-ofertas-head-title-nro">
+                    RENGLÓN N° {{nro}}
+                </div>
+                <div class="RteActaPrelacion-detalle-ofertas-head-title-nombre">
+                    {{nombre}}
+                </div>
+            </div>
+
+            <div class="RteActaPrelacion-detalle-ofertas-item">
+                <div>Cantidad de participantes</div>
+                <div>Cantidad de ofertas recibidas</div>
+                <div>Presupuesto Oficial</div>
+            </div>
+
+            <div class="RteActaPrelacion-detalle-ofertas-value">
+                <div>{{participantes}}</div>
+                <div>{{ofertas}}</div>
+                <div>{{presupuesto}}</div>
+            </div>
+        </div>
+
+        <div class="RteActaPrelacion-detalle-ofertas-table">
+
+            <div class="RteActaPrelacion-detalle-ofertas-table-head">
+                <div>N° Oferta</div>
+                <div>Nombre Proveedor</div>
+                <div>CUIT</div>
+                <div>Fecha y hora de oferta </div>
+                <div>Valor Total Ofrecido</div>
+            </div>
+
+
+            {{#each detalle}}
+            <div class="RteActaPrelacion-detalle-ofertas-table-value">
+                <div>{{oferta}}</div>
+                <div>{{proveedor}}</div>
+                <div>{{cuit}}</div>
+                <div>{{fechaHora}}</div>
+                <div>{{valorOfrecido}}</div>
+            </div>
+            {{/each}}
+
+
+        </div>
+
+
+    </div>
+
+    {{/each}}
+
+    <div class="RteActaPrelacion-firma">
+        Firma del Responsable
+    </div>
+
+</table>

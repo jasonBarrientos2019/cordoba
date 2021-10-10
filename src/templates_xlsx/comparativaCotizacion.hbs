@@ -1,0 +1,115 @@
+<table>
+
+    <tr>
+        <td id="img"><img src="../assets/images/gobierno.jpg" alt=""> </td>
+        <td></td>
+        <td color="002642" colspan="2">COMPARATIVA OFERTAS DE PROVEEDORES</td>
+    </tr>
+    <tr>
+        {{!-- fila en blanco --}}
+    </tr>
+    <tr background="002642" color="ffffff">
+        <td>Jurisdicción:</td>
+        <td>Unidad Administrativa</td>
+        <td>Solicitud de Cotización</td>
+        <td> Tipo de Contratación</td>
+        <td>Fecha de Impresión</td>
+        <td>Criterio</td>
+    </tr>
+    <tr background="dfdbdb" border="002642">
+        <td>{{jurisdiccion}}</td>
+        <td>{{unidadAdministrativa}}</td>
+        <td> N° {{cotizacion}}</td>
+        <td>{{tipoContratacion}}</td>
+        <td>{{fechaImpresion}}</td>
+        <td>{{criterio}}</td>
+    </tr>
+    <tr>
+        {{!-- fila en blanco --}}
+    </tr>
+    {{#each items}}
+
+
+    <tr background="1C415C" color="ffffff">
+        <td>Codigo-Ítem</td>
+        <td>Bien</td>
+        <td colspan="4s">Detalle</td>
+    </tr>
+
+    <tr background="dfdbdb" border="1C415C">
+        <td>
+            {{codigoItem}}
+        </td>
+        <td>
+            {{bien}}
+        </td>
+        <td colspan="4s">
+            {{detalle}}
+        </td>
+    </tr>
+
+
+    <tr background="2B658F" color="ffffff">
+        <td ></td>
+        {{#each proveedores}}
+        <td >{{proveedor}}</td>
+        {{/each}}
+
+    </tr>
+    <tr >
+        <td background="2B658F" color="ffffff" >Cantidad</td>
+        {{#each proveedores}}
+        <td background="dfdbdb"  border="2B658F">{{cantidad}}</td>
+        {{/each}}
+
+    </tr>
+    <tr>
+        <td background="2B658F" color="ffffff">Importe</td>
+        {{#each proveedores}}
+        <td background="dfdbdb"  border="2B658F">{{importe}}</td>
+        {{/each}}
+
+    </tr>
+    <tr>
+        <td background="2B658F" color="ffffff">Total</td>
+        {{#each proveedores}}
+        <td background="dfdbdb"  border="2B658F">{{total}}</td>
+        {{/each}}
+
+    </tr>
+    <tr >
+        <td colspan="2" background="6187A2" color="ffffff" >
+            Nombre Renglón: {{region}}
+        </td>
+    </tr>
+    <tr>
+        <td background="6187A2" color="ffffff" >
+            CANTIDAD TOTAL
+        </td>
+        <td background="dfdbdb" border="6187A2">
+            {{cantidadTotal}}
+        </td>
+    </tr>
+    <tr>
+        <td background="6187A2" color="ffffff" >
+            IMPORTE TOTAL
+        </td>
+        <td background="dfdbdb" border="6187A2" >
+            {{importeTotal}}
+        </td>
+    </tr>
+    <tr>
+        <td background="6187A2" color="ffffff" >
+            TOTAL RENGLÓN
+        </td>
+        <td background="dfdbdb" border="6187A2">
+            {{totalRegion}}
+        </td>
+    </tr>
+     <tr>
+        {{!-- fila en blanco --}}
+    </tr>
+    {{/each}}
+
+
+</table>

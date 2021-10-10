@@ -1,5 +1,8 @@
+const fs = require('fs');
+
+const colors = require('colors');
 class Cell {
-  constructor(cellValue, contRow, contCol,sheet) {
+  constructor(cellValue, contRow, contCol, sheet) {
     this.columns = [
       "A",
       "B",
@@ -28,7 +31,7 @@ class Cell {
       "Y",
       "Z",
     ];
-    this.sheet=sheet
+    this.sheet = sheet
     this.contRow = contRow;
     this.contCol = contCol;
     this.cellValue = cellValue;
@@ -46,7 +49,7 @@ class Cell {
     let initCell = `${this.columns[this.contCol]}${this.contRow}`;
     let calcSpan = this.contCol + (parseInt(colspanValue) - 1);
     let lastCell = `${this.columns[calcSpan]}${this.contRow}`;
-    
+
     this.cell = `${initCell}:${lastCell}`;
     this.nextCol += (parseInt(colspanValue) - 1);
   }
@@ -66,16 +69,67 @@ class Cell {
     };
 
   }
-  setAlign(textAlign){
-
-    this.sheet.getCell(this.cell).alignment={ vertical: 'middle', horizontal: textAlign }
+  setAlign(textAlign) {
+    this.sheet.getCell(this.cell).alignment = { horizontal: textAlign }
   }
+
+  setBorder(borderColor) {
+
+    this.sheet.getCell(this.cell).border = {
+      top: { style: 'thin', color: { argb: borderColor } },
+      left: { style: 'thin', color: { argb: borderColor } },
+      bottom: { style: 'thin', color: { argb: borderColor } },
+      right: { style: 'thin', color: { argb: borderColor } }
+    };
+
+  }
+  setBorderTop(borderColor) {
+
+    this.sheet.getCell(this.cell).border = {
+      top: { style: 'thin', color: { argb: borderColor } }
+    };
+
+  }
+  setBorderLeft(borderColor) {
+
+    this.sheet.getCell(this.cell).border = {
+      left: { style: 'thin', color: { argb: borderColor } }
+    };
+
+  }
+  setBorderBottom(borderColor) {
+
+    this.sheet.getCell(this.cell).border = {
+      bottom: { style: 'thin', color: { argb: borderColor } }
+    };
+
+  }
+
+  setBorderRight(borderColor) {
+
+    this.sheet.getCell(this.cell).border = {
+      right: { style: 'thin', color: { argb: borderColor } }
+    };
+
+  }
+
   setImg(src, wb) {
+
+
     this.img = true;
-    this.imgSrc = wb.addImage({
-      filename: src,
-      extension: "png",
-    });
+
+    try {
+      this.imgSrc = wb.addImage({
+        filename: `${__dirname}\\..\\${src}`,
+        extension: "png",
+      });
+
+
+
+    } catch (error) {
+      throw `Error en carga de imagen \n${error}`
+    }
+
   }
 
   //gettings

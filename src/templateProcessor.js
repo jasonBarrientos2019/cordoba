@@ -115,9 +115,9 @@ class TemplateProcessor {
       let hbResult = await hb(xlsxData)
 
 
-      let resultCss=await this.css(hbResult)
+      var resultCss=await this.css(hbResult)
 
-      var htmlBuild = await registerImagesPDF(resultCss);
+      // var htmlBuild = await registerImagesPDF(resultCss);
 
     } catch (error) {
       return error;
@@ -125,7 +125,7 @@ class TemplateProcessor {
     }
 
 
-    const xlsxResult=convertHtmlToXlsx(htmlBuild)
+    const xlsxResult=convertHtmlToXlsx(resultCss)
 
     // let work = new XlsxTemplate(xlsxContent);
 
