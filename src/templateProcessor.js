@@ -158,27 +158,47 @@ class TemplateProcessor {
 
     if (matches !== null) {
 
-      template.match(/{{>\s*[\w\.]+\s*}}/g).map((x) => {
-        var partialName = x.match(/[\w\.]+/)[0];
+      for(var x in matches){
 
-        let partialCheck = partials.includes(partialName);
+        var partialName = matches[x].match(/[\w\.]+/)[0];
 
-        if (!partialCheck) {
-          let contentFile;
+        
+      let findPartial = partials.includes(partialName);
+
+        if (!findPartial) {
+
+
+          var b64Template;
 
           try {
-            contentFile = this.getContentPDF(partialName)
+            if(partialName.indexOf("utils") != -1 ){
+               b64Template = await this.getContentPDF("../utils/"+partialName);  
+            }
+            else{
+              b64Template = await this.getContentPDF(partialName)
+            }
 
-            Handlebars.registerPartial(partialName, contentFile);
-            partials.push(partialName)
           } catch (error) {
 
             throw new Error(`\n No se encontro el partial ${partialName}\n`.red);
           }
-          this.registerPartials(contentFile);
+
+            partials.push(partialName)
+
+            var nextMatch = b64Template.match(/{{>\s*[\w\.]+\s*}}/g);
+
+            if(!nextMatch )
+            {
+              this.registerPartials(b64Template);
+            }
+            
+            Handlebars.registerPartial(partialName, b64Template);
+            
 
         }
-      });
+
+      };
+      
     }
 
   }
