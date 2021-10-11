@@ -25,8 +25,6 @@ class TemplateProcessor {
     try {
       var templateContent = await getContentPDF(nameTemplate);
 
-      //TODO: await this.preLoadUtils();
-
       await this.registerPartials(templateContent);
 
 
@@ -74,8 +72,6 @@ class TemplateProcessor {
 
       var templateContent = await getContentXLSX(xlsxName);
 
-      //TODO: await this.preLoadUtils();
-
     } catch (error) {
       return error;
 
@@ -101,26 +97,12 @@ class TemplateProcessor {
 
       var resultCss=await this.css(hbResult)
 
-      // var htmlBuild = await registerImagesPDF(resultCss);
-
     } catch (error) {
       return error;
 
     }
 
-
     const xlsxResult=convertHtmlToXlsx(resultCss)
-
-    // let work = new XlsxTemplate(xlsxContent);
-
-    // let sheetNumber = 1;
-
-    // work.substitute(sheetNumber, xlsxData);
-
-
-    // let workBuild = work.generate();
-
-
 
     return xlsxResult;
 
