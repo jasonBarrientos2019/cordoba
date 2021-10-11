@@ -3,7 +3,7 @@ const colors = require('colors')
 const cheerio = require('cheerio');
 const { DateTime } = require("luxon");
 
-const convertHtmlToXlsx = require('./convertHtmlToXlsx')
+const convertHtmlToXlsx = require('./controllers/Utils/convertHtmlToXlsx')
 
 //registers
 const { registerImagesPDF } = require("./controllers/registers/registerImages");

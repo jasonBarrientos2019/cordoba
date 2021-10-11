@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const ExcelJS = require('exceljs');
-const Cell = require('./controllers/class/Cell');
+const Cell = require('../class/Cell');
 
 function convertHtmlToXlsx(html) {
 
