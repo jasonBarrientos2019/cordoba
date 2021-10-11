@@ -1,6 +1,6 @@
 const os = require("os");
-const PagePool = require("../pagePool");
-const DigitalSign = require("../digitalSign");
+const PagePool = require("./pagePool");
+const DigitalSign = require("./digitalSign");
 const TemplateProcessor = require("../templateProcessor");
 
 class Setup{
