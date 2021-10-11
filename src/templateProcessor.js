@@ -1,17 +1,13 @@
 const handlebars = require("handlebars");
 const colors = require('colors')
-const fs = require('fs')
-const path = require('path')
 const cheerio = require('cheerio');
 const { DateTime } = require("luxon");
 
-var promisedHandlebars = require("promised-handlebars");
-var Q = require("q");
-var Handlebars = promisedHandlebars(handlebars, { Promise: Q.Promise });
 const convertHtmlToXlsx = require('./convertHtmlToXlsx')
 
 //registers
 const { registerImagesPDF } = require("./controllers/registers/registerImages");
+//contents
 const { getContentPDF ,getContentXLSX,getCss} = require("./controllers/Utils/getContents");
 
 
@@ -52,7 +48,7 @@ class TemplateProcessor {
 
     try {      
       
-      var hb = Handlebars.compile(html);
+      var hb = handlebars.compile(html);
 
       let hbResult = await hb(dataTemplate)
 
@@ -98,7 +94,7 @@ class TemplateProcessor {
 
     try {      
       
-      var hb = Handlebars.compile(html);
+      var hb = handlebars.compile(html);
 
       let hbResult = await hb(xlsxData)
 
@@ -173,7 +169,7 @@ class TemplateProcessor {
               this.registerPartials(b64Template);
             }
             
-            Handlebars.registerPartial(partialName, b64Template);
+            handlebars.registerPartial(partialName, b64Template);
             
 
         }
@@ -203,14 +199,14 @@ class TemplateProcessor {
   
   async registerHelpers(){
 
-    Handlebars.registerHelper("if_eq", (a, b, opts) => {
+    handlebars.registerHelper("if_eq", (a, b, opts) => {
       if (a == b) {
         return opts.fn(this);
       } else {
         return opts.inverse(this);
       }
     });
-    Handlebars.registerHelper("eval", (expr, options) => {
+    handlebars.registerHelper("eval", (expr, options) => {
       var reg = new RegExp("\\${(\\S+)}", "g");
       var compiled = expr.replace(reg, function (match, pull) {
         return '"' + options.hash[pull] + '"';
@@ -219,7 +215,7 @@ class TemplateProcessor {
       return evaluated;
     });
 
-    Handlebars.registerHelper("date", (date, format, options) => {
+    handlebars.registerHelper("date", (date, format, options) => {
 
       function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
