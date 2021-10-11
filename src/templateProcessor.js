@@ -2,7 +2,6 @@ const handlebars = require("handlebars");
 const colors = require('colors')
 const fs = require('fs')
 const path = require('path')
-const XlsxTemplate = require("xlsx-template");
 const cheerio = require('cheerio');
 const { DateTime } = require("luxon");
 
@@ -13,6 +12,10 @@ const convertHtmlToXlsx = require('./convertHtmlToXlsx')
 
 //registers
 const { registerImagesPDF } = require("./controllers/registers/registerImages");
+const { getContentPDF ,getContentXLSX,getCss} = require("./controllers/Utils/getContents");
+
+
+
 
 let partials = [];
 
@@ -24,7 +27,7 @@ class TemplateProcessor {
 
   async buildPDF(nameTemplate, dataTemplate) {
     try {
-      var templateContent = await this.getContentPDF(nameTemplate);
+      var templateContent = await getContentPDF(nameTemplate);
 
       //TODO: await this.preLoadUtils();
 
@@ -66,21 +69,6 @@ class TemplateProcessor {
 
   }
 
-  async getContentPDF(nameTemplate) {
-
-    let pathFile = path.resolve(`${__dirname}\\templates_pdf\\${nameTemplate}.hbs`)
-    let fileContent = fs.readFileSync(pathFile, "utf-8");
-
-    return fileContent;
-  }
-
-  async getCss(nameCSSFile) {
-
-    let pathFile = path.resolve(`${__dirname}\\${nameCSSFile}`)
-    let fileContent = fs.readFileSync(pathFile, "utf-8");
-
-    return fileContent;
-  }
 
   // ############################ XLSX ############################ 
 
@@ -88,7 +76,7 @@ class TemplateProcessor {
 
     try {
 
-      var templateContent = await this.getContentXLSX(xlsxName);
+      var templateContent = await getContentXLSX(xlsxName);
 
       //TODO: await this.preLoadUtils();
 
@@ -144,13 +132,6 @@ class TemplateProcessor {
   }
 
 
-  getContentXLSX(xlsxName) {
-    let pathFile = path.resolve(`${__dirname}\\templates_xlsx\\${xlsxName}.hbs`)
-    let fileContent = fs.readFileSync(pathFile);
-
-    return fileContent;
-  }
-
   // ############################ Partials ############################ 
 
   async registerPartials(template) {
@@ -172,10 +153,10 @@ class TemplateProcessor {
 
           try {
             if(partialName.indexOf("utils") != -1 ){
-               b64Template = await this.getContentPDF("../utils/"+partialName);  
+               b64Template = await getContentPDF("../utils/"+partialName);  
             }
             else{
-              b64Template = await this.getContentPDF(partialName)
+              b64Template = await getContentPDF(partialName)
             }
 
           } catch (error) {
@@ -210,7 +191,7 @@ class TemplateProcessor {
     for (let index = 0; index < links.length; index++) {
         const element = $(links[index]);
 
-        var css = await this.getCss(element.attr("href"));
+        var css = await getCss(element.attr("href"));
         if(css instanceof Error)
           throw css;
 
