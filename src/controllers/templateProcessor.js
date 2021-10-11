@@ -3,12 +3,12 @@ const colors = require('colors')
 const cheerio = require('cheerio');
 const { DateTime } = require("luxon");
 
-const convertHtmlToXlsx = require('./controllers/Utils/convertHtmlToXlsx')
+const convertHtmlToXlsx = require('./Utils/convertHtmlToXlsx')
 
 //registers
-const { registerImagesPDF } = require("./controllers/registers/registerImages");
+const { registerImagesPDF } = require("./registers/registerImages");
 //contents
-const { getContentPDF ,getContentXLSX,getCss} = require("./controllers/Utils/getContents");
+const { getContentPDF ,getContentXLSX,getCss} = require("./Utils/getContents");
 
 
 
