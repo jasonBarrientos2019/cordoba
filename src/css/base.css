@@ -1,20 +1,17 @@
 
-/* paleta de colroes */
-
+/* paleta de colores*/
 
 .paleta{
+  /*azules*/
   color:#002642 ;
   color:#1C415C ;
   color:#2B658F ;
   color:#6187A2 ;
 
   /*Gris*/
-  /*claro*/
   color:#CDCDCD ;
-    /*ocurp*/
-    color:#9B9B9B ;
-
-    color: #44484B;
+  color:#9B9B9B ;
+  color: #44484B;
 
 }
 
@@ -29,6 +26,7 @@ body{
   font-family: Helvetica;
 }
 
+/*  esta  sirve cuando se saber q solo ocupara una pagina*/
 .sheet-static{
   width: 100%;
   height: 1060px;
@@ -53,16 +51,17 @@ height: 970px; */
 
   
   .logo-gobierno{
-        width: 180px;
-        height: 60px;
-    }
+    width: 180px;
+    height: 60px;
+  }
 
-  /* Evita que un div cone sta clase sea cortado, pro el salto de pagina */
+  /* Evita que un div con esta clase sea cortado, por el salto de pagina */
 
 .npb{
   page-break-inside: avoid;
 }
 
+/*tamañode la pagina*/
 @page {
   size: A4;
   margin: 20px;
@@ -71,6 +70,7 @@ height: 970px; */
 
   @media print {
 
+    /*se usar  como corte de pagina e inicia una nueva*/
     .end-page{
         page-break-before: always;
     }
