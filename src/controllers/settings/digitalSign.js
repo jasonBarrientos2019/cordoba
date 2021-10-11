@@ -6,7 +6,7 @@ const plainAddPlaceholder = require("node-signpdf/dist/helpers/plainAddPlacehold
 class DigitalSign {
   constructor() {
     console.log(__dirname);
-    this.certificate = fs.readFileSync(__dirname + "/../certificate/client-identity.p12");
+    this.certificate = fs.readFileSync(__dirname + "/../../certificate/client-identity.p12");
   }
 
   async sign(pdfBuffer) {

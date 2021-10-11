@@ -1,7 +1,7 @@
 const os = require("os");
 const PagePool = require("./pagePool");
 const DigitalSign = require("./digitalSign");
-const TemplateProcessor = require("./templateProcessor");
+const TemplateProcessor = require("../templateProcessor");
 
 class Setup{
     constructor(){

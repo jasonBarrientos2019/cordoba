@@ -1,6 +1,6 @@
 
 const {response,request}=require('express');
-const Setup=require('./setup');
+const Setup=require('./settings/setup');
 const setup=new Setup();
 
 const postPrint = (req=request, res=response, next) => {

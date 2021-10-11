@@ -11,8 +11,6 @@ const { registerImagesPDF } = require("./registers/registerImages");
 const { getContentPDF ,getContentXLSX,getCss} = require("./Utils/getContents");
 
 
-
-
 let partials = [];
 
 class TemplateProcessor {
@@ -110,6 +108,10 @@ class TemplateProcessor {
   }
 
 
+  async buildHtml(nameTemplate, dataTemplate){
+
+  }
+
   // ############################ Partials ############################ 
 
   async registerPartials(template) {
@@ -188,6 +190,7 @@ class TemplateProcessor {
         return opts.inverse(this);
       }
     });
+
     handlebars.registerHelper("eval", (expr, options) => {
       var reg = new RegExp("\\${(\\S+)}", "g");
       var compiled = expr.replace(reg, function (match, pull) {
@@ -228,6 +231,5 @@ class TemplateProcessor {
 
 
 }
-
 
 module.exports = TemplateProcessor;
