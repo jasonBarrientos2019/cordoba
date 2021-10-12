@@ -2,11 +2,12 @@ const handlebars = require("handlebars");
 const colors = require('colors')
 const cheerio = require('cheerio');
 const { DateTime } = require("luxon");
+const fs = require('fs');
 
 const convertHtmlToXlsx = require('./Utils/convertHtmlToXlsx')
 
 //registers
-const { registerImagesPDF } = require("./registers/registerImages");
+const { registerImagesPDF ,registerFonts} = require("./registers/registers");
 //contents
 const { getContentPDF ,getContentXLSX,getCss} = require("./Utils/getContents");
 
@@ -46,14 +47,12 @@ class TemplateProcessor {
       
       var hb = handlebars.compile(html);
 
-      let hbResult = await hb(dataTemplate)
-
-
-      let resultCss=await this.css(hbResult)
-
+      var hbResult = await hb(dataTemplate)
+      var resultCss=await this.css(hbResult)
       var htmlBuild = await registerImagesPDF(resultCss);
-
-      return htmlBuild;
+      var retulFonts=await registerFonts(htmlBuild);
+      return retulFonts;
+      
     } catch (error) {
       return error;
 
@@ -107,10 +106,6 @@ class TemplateProcessor {
 
   }
 
-
-  async buildHtml(nameTemplate, dataTemplate){
-
-  }
 
   // ############################ Partials ############################ 
 

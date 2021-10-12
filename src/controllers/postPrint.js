@@ -12,13 +12,9 @@ const postPrint = (req=request, res=response, next) => {
     setup.pagePool.acquire().then(async (page) => {
       if (format=="pdf") {
 
-     
-
       printPDF(page, req.body).then((file) => {
               setup.pagePool.release(page);
-              
-         
-
+            
               res.setHeader("Content-Type", "application/pdf");
               if (req.body.document.sign === true) {
                 setup.digitalSign.sign(file).then((signedPdf) => {
@@ -51,8 +47,6 @@ const postPrint = (req=request, res=response, next) => {
       let templateName=body.document.template
       let templaetData=body.content
       
-  
-
       var build = await setup.templateProcessor.buildPDF(templateName,templaetData);
 
       await page.setContent(build);
@@ -69,12 +63,8 @@ const postPrint = (req=request, res=response, next) => {
       //Se obtiene del request el nombre y variables a usar
       let templateName=body.document.template
       let templaetData=body.content
-
-      
       var build = await setup.templateProcessor.buildXLSX(templateName,templaetData);
-      
       await page.setContent(build);
-    
       return build;
     }
 

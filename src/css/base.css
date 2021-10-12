@@ -12,7 +12,15 @@
   color:#CDCDCD ;
   color:#9B9B9B ;
   color: #44484B;
+}
+@font-face {
+  font-family: Code39Azalea;
+  src: url(../assets/fonts/Barcode/Code39Azalea_2.ttf) format("truetype");
+}
+.codebar{
 
+  font-family: Code39Azalea;
+  font-size: 20pt;
 }
 
 
