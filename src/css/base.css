@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: Code39Azalea;
-  src: url(../assets/fonts/Barcode/Code39Azalea_2.ttf) format("truetype");
+  src: url(../assets/fonts/Barcode/Code39Azalea.ttf) format("truetype");
 }
 .codebar{
 

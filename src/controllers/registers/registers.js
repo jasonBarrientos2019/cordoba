@@ -29,7 +29,6 @@ async function registerFonts(template) {
   const regex = /url\((.*?)\)[\n\r\s]+format\((\'|\")(.*?)(\'|\")\)/g;
 
   var m;
-console.log(`registerFonts`);
   do {
     m = regex.exec(template);
     if (m) {
