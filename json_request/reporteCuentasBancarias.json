@@ -1,6 +1,6 @@
 {
     "document":{
-        "template":"reporte_cuentas_bancarias",
+        "template":"reporteCuentaBancarias",
         "sign":true,
         "format":"pdf"
     },

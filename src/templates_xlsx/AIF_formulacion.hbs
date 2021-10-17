@@ -1,25 +1,27 @@
-<table >
-    <tr>
-        <td  id="img"><img src="../assets/images/gobierno.jpg" alt=""> </td>
-        <td   >Cuenta Ahorro - Inversión - Financiamiento Presupuesto </td>
-        <td></td>
-        <td colspan="2">Fecha de Confección</td>
+<table>
 
-    </tr>
-    <tr>
-        <td  colspan="2"> </td>
-        <td text-align="center">{{presupuesto}}</td>
-        <td></td>
-        <td>{{date "now" "dd/MM/yyyy"}} {{date "now" "hh:mm"}}</td>
+    <tr  text-align="center">
+        <td id="img"><img src="../assets/images/gobierno.jpg" alt=""> </td>
+        <td colspan="2">Cuenta Ahorro - Inversión - Financiamiento Presupuesto </td>
+        <td background="002642" color="ffffff">Fecha de Confección</td>
     </tr>
 
-    <tr background="002642"  color="ffffff">
+    <tr text-align="center">
+        <td> </td>
+        <td colspan="2">{{presupuesto}}</td>
+        <td >{{date "now" "dd/MM/yyyy"}} {{date "now" "hh:mm"}}</td>
+    </tr>
+
+    <tr>
+        {{!-- vacia --}}
+    </tr>
+
+    <tr background="002642" color="ffffff">
         <td> </td>
         <td>Anualizado</td>
         <td>Anteproyecto</td>
         <td>Proyecto Ley</td>
     </tr>
-
 
     {{#each montos}}
     {{#each groups}}
@@ -37,7 +39,7 @@
         <td> {{proyectoLey}}</td>
     </tr>
     {{#each elementos}}
-    <tr text-align="right" >
+    <tr text-align="right">
         <td> {{nombreElemento}} </td>
         <td> {{montoAnualizado}}</td>
         <td> {{montoAnteproyecto}}</td>
@@ -48,8 +50,8 @@
     {{/each}}
     {{/each}}
 
-    <tr background="6187A2" color="ffffff" >
-        <td > {{montoName}} </td>
+    <tr background="6187A2" color="ffffff">
+        <td> {{montoName}} </td>
         <td> {{montoAnualizado}}</td>
         <td> {{montoAnteproyecto}}</td>
         <td> {{proyectoLey}}</td>

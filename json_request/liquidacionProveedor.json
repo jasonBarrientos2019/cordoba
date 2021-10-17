@@ -1,0 +1,81 @@
+{
+    "document": {
+        "template": "liquidacionProveedor",
+        "sign": true,
+        "format": "pdf"
+    },
+    "content": {
+        "lote": "5123099",
+        "agente": "DIRECCIÓN GENERAL DE TESORERÍA Y CRÉDITO PÚBLICO DE LA PROVINCIA DE CÓRDOBA",
+        "cuit": "34999230573",
+        "ingresosBrutos": "300000088",
+        "direccion": "Concepción Arenal 54",
+        "localidad": "Córdoba",
+        "cp": "5001",
+        "proveedor": {
+            "razonSocial": "ABC S.R.L",
+            "calle": "DUARTE QUIROS IGNACIO",
+            "ciudad": "CORDOBA",
+            "nroCalle": "1400",
+            "cp": "500",
+            "cuit": "30711296529",
+            "piso": "1",
+            "barrio": "ALBERDI",
+            "provincia":"Cordoba",
+            "inicioActividad":"01/03/2010",
+            "fechaBaja":""
+
+        },
+        "ordenPago": {
+            "expediente": "0165-170032/2021",
+            "ordenPago": "2021 - 217 - 1 - 13 - 166/1 - 1 ",
+            "montoOP": "11.788.204,94",
+            "fechaLiquidacion": "23/09/2021",
+            "nroTribunalCuentas": "",
+            "liquidacionDOCOF": "N",
+            "DOCOF": "",
+            "montos": {
+                "saldoLiquidarOP": "230.000,00",
+                "totalProveedor": "135.203,40",
+                "saldoLiquidarProveedor": "0,00",
+                "totalLiquidado": "138.000,00",
+                "totalDeduccion": "0,00",
+                "totalRetenido": "2.796,60"
+            }
+        },
+        "comprobante":{
+            "fecha":"01/07/2021",
+            "nroReferencia":"2021/014428",
+            "tipo":"FACTURA",
+            "codAfip":"1",
+            "nro":"C0002 - 00001353",
+            "montoBruto":"345.000,00",
+            "montoLiquidado":"138.000,00",
+            "nroOCDev":"2021/000005",
+            "nroOCSellos":""
+        },
+        "impuestos":[
+            {
+            "nombre":"Impuesto a las Ganancias ",
+            "monto":"1.416,60",
+            "constancia":"275712",
+            "descripcion":"LOC. OBRA Y/O SERV. NO EJEC. EN REL."
+        },   {
+            "nombre":"Sistema Unico de Seguridad Social",
+            "monto":"0,0",
+            "constancia":"",
+            "descripcion":"ALICUOTA INFORMADA POR RENTAS PARA EL MES EN CURSO: 0.00 %"
+        },   {
+            "nombre":"nombre",
+            "monto":"1.380,00",
+            "constancia":"197011",
+            "descripcion":"Regimen General"
+        },   {
+            "nombre":"Ingresos Brutos Córdoba ",
+            "monto":"0,0",
+            "constancia":"",
+            "descripcion":"ALICUOTA INFORMADA POR RENTAS PARA EL MES EN CURSO: 0.00 %"
+        }
+    ]
+    }
+}

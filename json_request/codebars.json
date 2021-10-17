@@ -1,0 +1,20 @@
+{
+    "document": {
+        "template": "codebars",
+            "sign": true,
+                "format": "pdf"
+    },
+    "content": {
+        "codes": [
+            {
+                "codeName": "ABEJA",
+                "code": "2121230016925068"
+            },
+            {
+                "codeName": "INMUEBLES",
+                "code": "2121430016925056"
+            }
+        ]
+
+    }
+}

@@ -1,0 +1,395 @@
+<style>
+    .landscape {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+    .landscape-head {
+        display: grid;
+        grid-template-columns: 10% 75% 13%;
+        grid-column-gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .escudo {
+        width: 80px;
+    }
+
+    .landscape-info {
+        font-size: 9pt;
+    }
+
+    .landscape-info-head {
+        background: #002642;
+        color: white;
+        padding: 5px;
+    }
+
+    .landscape-info-value {
+        border: 1px solid #002642;
+
+    }
+
+    .landscape-title {
+        color: #002642;
+        text-align: center;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    .landscape-info-item {
+        text-align: center;
+    }
+
+    .landscape-info-gob {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        padding: 10px;
+    }
+
+    .landscape-item {
+        display: flex;
+    }
+
+    .landscape-item-head {
+        font-weight: bold;
+        color: #002642;
+    }
+
+    .landscape-item-value {
+        padding-left: 10px;
+    }
+
+    .landscape-info-prov,
+    .landscape-info-OP {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .landscape-info-prov,
+    .landscape-info-OP,
+    .landscape-info-OP-montos {
+        border-top: 1px solid #1C415C;
+        padding: 10px;
+
+    }
+
+
+    .landscape-info-OP-montos {
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }
+
+    /*Comprobante*/
+    .landscape-info-comprobante {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .landscape-comprobante-item-head {
+        background: #1C415C;
+        padding: 5px;
+        color: white;
+    }
+
+    .landscape-comprobante-item-value {
+        padding: 5px;
+
+    }
+
+    .landscape-firmas {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .landscape-firmas-item {
+        text-align: center;
+        padding: 5px;
+        border-top: 1px solid #000;
+        min-width: 150px;
+        margin-top: 180px;
+    }
+
+    .landscape-info-impuestos {
+        display: grid;
+        grid-template-columns: 1fr 150px 1fr 2fr;
+        border-top: 1px solid #1C415C;
+        margin-top: 20px;
+                padding-top: 20px;
+
+    }
+
+    .landscape-info-impuestos-nombre {
+        color: #1C415C;
+    }
+
+    .landscape-info-impuestos-monto {
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    @page {
+        size: landscape;
+        margin: 20px;
+    }
+
+    #agente {
+        grid-column: 1/span 2;
+    }
+</style>
+
+
+<div class="landscape">
+
+    <div class="landscape-head">
+        <div>
+            <img class="escudo" src="../assets/images/escudo.png" alt="">
+
+        </div>
+        <div class="landscape-title">
+            <br>
+            DIRECCIÓN GENERAL DE TESORERÍA Y CRÉDITO PÚBLICO DE LA PROVINCIA DE CÓRDOBA
+            <br>
+            LIQUIDACIÓN AL PROVEEDOR
+
+        </div>
+        <div class="landscape-info">
+
+            <div class="landscape-info-item">
+                <div class="landscape-info-head">Fecha de Impresión </div>
+                <div class="landscape-info-value">{{date "now" "dd/MM/yyyy"}}</div>
+            </div>
+
+            <div class="landscape-info-item">
+                <div class="landscape-info-head">Lote Nº</div>
+                <div class="landscape-info-value">{{lote}} </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="landscape-info-gob">
+        <div id="agente" class="landscape-item">
+            <div class="landscape-item-head">Agente</div>
+            <div class="landscape-item-value">{{agente}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">C.U.I.T:</div>
+            <div class="landscape-item-value">{{cuit}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Ingresos Brutos</div>
+            <div class="landscape-item-value">{{ingresosBrutos}}</div>
+        </div>
+
+        <div class="landscape-item">
+            <div class="landscape-item-head">Direccion</div>
+            <div class="landscape-item-value">{{direccion}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Localidad</div>
+            <div class="landscape-item-value">{{localidad}}</div>
+        </div>
+
+        <div class="landscape-item">
+            <div class="landscape-item-head">C.P.</div>
+            <div class="landscape-item-value">{{cp}}</div>
+        </div>
+
+    </div>
+
+    <div class="landscape-info-prov">
+        <div class="landscape-item">
+            <div class="landscape-item-head">Razon social</div>
+            <div class="landscape-item-value">{{proveedor.razonSocial}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">C.P.</div>
+            <div class="landscape-item-value">{{proveedor.cp}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Provincia</div>
+            <div class="landscape-item-value">{{proveedor.provincia}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Calle</div>
+            <div class="landscape-item-value">{{proveedor.calle}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">C.U.I.T.</div>
+            <div class="landscape-item-value">{{proveedor.cuit}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Inicio Actividad</div>
+            <div class="landscape-item-value">{{proveedor.inicioActividad}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Ciudad</div>
+            <div class="landscape-item-value">{{proveedor.ciudad}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Piso</div>
+            <div class="landscape-item-value">{{proveedor.piso}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Fecha Baja</div>
+            <div class="landscape-item-value">{{proveedor.fechaBaja}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Nro:</div>
+            <div class="landscape-item-value">{{proveedor.nroCalle}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Barrio</div>
+            <div class="landscape-item-value">{{proveedor.barrio}}</div>
+        </div>
+
+    </div>
+
+    <div class="landscape-info-OP">
+        <div class="landscape-item">
+            <div class="landscape-item-head">Nº Expediente</div>
+            <div class="landscape-item-value">{{ordenPago.expediente}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Orden de Pago</div>
+            <div class="landscape-item-value">{{ordenPago.ordenPago}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Nº Tribunal de Cuentas:</div>
+            <div class="landscape-item-value">{{ordenPago.nroTribunalCuentas}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Monto O.P</div>
+            <div class="landscape-item-value">{{ordenPago.montoOP}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Liquidación DOCOF</div>
+            <div class="landscape-item-value">{{ordenPago.liquidacionDOCOF}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Fecha Liquidación</div>
+            <div class="landscape-item-value">{{ordenPago.fechaLiquidacion}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">% DOCOF.</div>
+            <div class="landscape-item-value">{{ordenPago.DOCOF}}</div>
+        </div>
+    </div>
+
+    <div class="landscape-info-OP-montos">
+
+        <div class="landscape-item">
+            <div class="landscape-item-head">Saldo a Liquidar OP</div>
+            <div class="landscape-item-value">{{ordenPago.montos.saldoLiquidarOP}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Total a Proveedor</div>
+            <div class="landscape-item-value">{{ordenPago.montos.totalProveedor}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Saldo a Liquidar Prov</div>
+            <div class="landscape-item-value">{{ordenPago.montos.saldoLiquidarProveedor}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Total Liquidado</div>
+            <div class="landscape-item-value">{{ordenPago.montos.totalLiquidado}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Total por Deducción:</div>
+            <div class="landscape-item-value">{{ordenPago.montos.totalDeduccion}}</div>
+        </div>
+        <div class="landscape-item">
+            <div class="landscape-item-head">Total Retenido</div>
+            <div class="landscape-item-value">{{ordenPago.montos.totalRetenido}}</div>
+        </div>
+    </div>
+
+    <div class="landscape-info-comprobante">
+
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Fec. Comprobante</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.fecha}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Nro. Referencia</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.nroReferencia}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Tipo Comprobante</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.tipo}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Cod AFIP</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.codAfip}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Nº Comprobante</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.nro}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Monto Bruto</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.montoBruto}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Monto Liquidado</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.montoLiquidado}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Nro OC. Dev.</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.nroOCDev}}</div>
+        </div>
+        <div class="landscape-comprobante-item">
+            <div class="landscape-comprobante-item-head">Nro OC. Sellos</div>
+            <div class="landscape-comprobante-item-value">{{comprobante.nroOCSellos}}</div>
+        </div>
+
+
+    </div>
+
+    <div class="landscape-info-impuestos">
+
+        {{#each impuestos}}
+        <div class="landscape-info-impuestos-nombre"> {{nombre}}</div>
+        <div class="landscape-info-impuestos-monto">$ {{monto}}</div>
+        <div>
+            {{#if constancia}}
+            Nº Constancia {{constancia}}
+            {{/if}}
+        </div>
+        <div> {{descripcion}}</div>
+        {{/each}}
+
+    </div>
+
+    <div class="landscape-firmas">
+
+        <div class="landscape-firmas-item">
+            Firma
+        </div>
+
+        <div class="landscape-firmas-item">
+            Aclaracion
+        </div>
+
+        <div class="landscape-firmas-item">
+            D.N.I.
+        </div>
+
+        <div class="landscape-firmas-item">
+            Dirección General de Tesorería y Crédito Público de la Provincia de Córdoba
+        </div>
+
+    </div>
+
+
+
+</div>

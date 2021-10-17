@@ -1,0 +1,28 @@
+<style>
+    .code {
+        margin-left: auto;
+        text-align: center;
+        padding: 10px;
+    }
+.code div{
+    padding: 5px;
+}
+</style>
+
+<div class="sheet-static">
+
+    <div class="codebars">
+
+        {{#each codes}}
+
+        <div class="code">
+            <div>{{codeName}}</div>
+            <div class="codebar">{{code}}</div>
+            <div>{{code}}</div>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</div>

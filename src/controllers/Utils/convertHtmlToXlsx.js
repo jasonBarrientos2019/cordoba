@@ -30,7 +30,7 @@ function convertHtmlToXlsx(html) {
 
       let bgRow = $(row).attr('background')
       let colorRow = $(row).attr('color')
-      let textAlign = $(row).attr('text-align')
+      let textAlignRow = $(row).attr('text-align')
 
       let rowBorder = $(row).attr('border')
       let rowBorderLeft = $(row).attr('border-l')
@@ -47,6 +47,7 @@ function convertHtmlToXlsx(html) {
         let id = $(value).attr('id')
         let bgCell = $(value).attr('background')
         let colorCell = $(value).attr('color')
+        let textAlignCell = $(value).attr('text-align')
 
         let border = $(value).attr('border')
         let borderLeft = $(value).attr('border-l')
@@ -64,6 +65,7 @@ function convertHtmlToXlsx(html) {
           var src = $(value).find("img").attr('src')
           cell.setImg(src, workbook);
         }
+        //settings Row
         if (bgRow) {
           cell.setBg(bgRow);
         }
@@ -72,18 +74,9 @@ function convertHtmlToXlsx(html) {
           cell.setColor(colorRow);
 
         }
-        if (textAlign) {
-          cell.setAlign(textAlign)
+        if (textAlignRow) {
+          cell.setAlign(textAlignRow)
         }
-
-        if (bgCell) {
-          cell.setBg(bgCell);
-        }
-        if (colorCell) {
-          cell.setColor(colorCell);
-
-        }
-
         //row BORDER
         if (rowBorder) {
           cell.setBorder(rowBorder);
@@ -100,6 +93,21 @@ function convertHtmlToXlsx(html) {
         if (rowBorderTop) {
           cell.setBorderTop(rowBorderTop);
         }
+
+
+
+        //cell settings
+        if (bgCell) {
+          cell.setBg(bgCell);
+        }
+        if (colorCell) {
+          cell.setColor(colorCell);
+
+        }
+      if (textAlignCell) {
+          cell.setAlign(textAlignCell)
+        }
+
 
         //cell broder
         if (border) {
