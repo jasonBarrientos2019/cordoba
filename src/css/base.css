@@ -29,11 +29,11 @@
     margin:0;
     padding:0; 
     box-sizing: border-box;
-    font-size: 9pt;
+    font-size: 9pt;  
+    font-family: Helvetica;
+
 }
-body{
-  font-family: Helvetica;
-}
+
 
 /*  esta  sirve cuando se saber q solo ocupara una pagina*/
 .sheet-static{
