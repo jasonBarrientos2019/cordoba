@@ -120,7 +120,7 @@ class Cell {
 
     try {
       this.imgSrc = wb.addImage({
-        filename: `${__dirname}\\..\\${src}`,
+        filename: `${__dirname}/../${src}`,
         extension: "png",
       });
 

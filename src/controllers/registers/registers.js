@@ -12,7 +12,7 @@ async function registerImagesPDF(template) {
         var url = m[1];
 
         try {
-          var pathFile=`${__dirname}\\..\\${url}`;
+          var pathFile=`${__dirname}/../${url}`;
           var b64Template=await imageToBase64(pathFile);
           
         } catch (error) {
@@ -45,7 +45,6 @@ async function registerFonts(template) {
     }
   } while (m);
 
-  fs.writeFileSync("output.txt",template)
   return template;
 }
 
