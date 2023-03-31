@@ -53,7 +53,12 @@ const postPrint = (req=request, res=response, next) => {
     
       return page.pdf({
         preferCSSPageSize: true,
-        printBackground: true
+        printBackground: true,
+                              displayHeaderFooter: true,
+
+        headerTemplate: "<div><div class='pageNumber'></div> <div>/</div><div class='totalPages'></div></div>",
+        footerTemplate:"<div style=\"margin: 0px 20px; width: 100%; display: flex;justify-content: space-between;border-top: 1px solid rgb(140, 144, 148);font-size: 7pt !important;color: rgb(91, 92, 93);\"> <div style=\"padding-left: 10px;padding-top: 3px;\"> </div> <div style=\"padding-right: 10px; padding-top: 3px;\"> Pag. <span class=\"pageNumber\"></span> de <span class=\"totalPages\"></span> </div> </div>"
+
       });
 
     }
